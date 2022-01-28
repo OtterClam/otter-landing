@@ -1,14 +1,12 @@
-import { ElementType, ComponentProps, forwardRef, CSSProperties } from 'react'
-
-import { Box, SvgIcon } from '@material-ui/core'
-import Image from 'next/image'
+import { Box } from '@material-ui/core'
+import React, { ComponentProps, CSSProperties, forwardRef } from 'react'
 
 type BoxProps = ComponentProps<typeof Box>
 type ButtonType = 'outline' | 'solid' | 'icon'
 type Props = BoxProps & {
   text?: string
   type?: ButtonType
-  icon?: ElementType<any>
+  Icon?: any
   href?: string
   target?: string
 }
@@ -34,7 +32,7 @@ const ICON_BASE_STYLE: CSSProperties = { width: '20px', height: '20px', vertical
 const ICON_SPACING: CSSProperties = { marginRight: '10px', marginLeft: '-10px' }
 
 const CustomButton = forwardRef<any, Props>(
-  ({ type = 'solid', className = '', component, text, icon, ...props }, ref) => {
+  ({ type = 'solid', className = '', component, text, Icon, ...props }, ref) => {
     component = props.href ? 'a' : component
     if (type === 'icon') {
       return (
@@ -45,7 +43,7 @@ const CustomButton = forwardRef<any, Props>(
           component={component}
           {...props}
         >
-          {icon && <Image src={icon} width={20} height={20} alt={text} />}
+          {Icon && <Icon />}
         </Box>
       )
     }
@@ -57,9 +55,9 @@ const CustomButton = forwardRef<any, Props>(
         component={component}
         {...props}
       >
-        {icon && (
+        {Icon && (
           <Box {...ICON_SPACING}>
-            <Image src={icon} width={20} height={20} alt={text} />{' '}
+            <Icon />
           </Box>
         )}
         <p>{text}</p>

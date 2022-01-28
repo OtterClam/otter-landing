@@ -22,7 +22,7 @@ const OttoBuyClamHint = () => {
   return (
     <div className={`otto-buy-clam-hint__container ${classes.container}`}>
       <div>
-        <Image src={CLAM} width={60} height={60} />
+        <CLAM />
       </div>
       <div className={`otto-buy-clam-hint__content ${classes.content}`}>{t('otto.countdown.hintDescription')}</div>
       <Link

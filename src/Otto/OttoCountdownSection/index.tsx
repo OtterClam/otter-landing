@@ -20,7 +20,9 @@ const OttoCountdownSection = () => {
   const { t } = useTranslation()
   return (
     <div className={`otto-countdown__container ${classes.container}`}>
-      <Image className="otto-countdown__deco left" src={OttoDecoLeftImage} alt="countdown left" />
+      <div className="otto-countdown__deco left">
+        <Image src={OttoDecoLeftImage} alt="countdown left" />
+      </div>
       <h4 className={`otto-countdown__title ${classes.h4}`}>{t('otto.countdown.mintTitle')}</h4>
       <p className="otto-countdown__content">COMING SOON</p>
       {/* <Countdown
@@ -32,7 +34,9 @@ const OttoCountdownSection = () => {
       /> */}
       {/* TODO|OTTO: add time up callback */}
       <OttoBuyClamHint />
-      <Image className="otto-countdown__deco right" src={OttoDecoRightImage} alt="countdown right" />
+      <div className="otto-countdown__deco right">
+        <Image src={OttoDecoRightImage} alt="countdown right" />
+      </div>
     </div>
   )
 }

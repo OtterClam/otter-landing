@@ -53,17 +53,13 @@ const OttoWhitelistSection = () => {
       )}
       {isTablet && <Image className="otto-whitelist__tablet-image" src={WhiteListTopBg} alt="whitelist" />}
       <div className={`otto-whitelist__content ${classes.content}`}>
-        <Typography className={classes.body2} variant="body2">
-          {t('otto.whitelist.amount')}
-        </Typography>
-        <Typography className={classes.h3} variant="h3">
-          5,000 Ottos
-        </Typography>
-        <Typography className={classes.body1} variant="body1">
+        <p className={classes.body2}>{t('otto.whitelist.amount')}</p>
+        <h3 className={classes.h3}>5,000 Ottos</h3>
+        <p className={classes.body1}>
           {t('otto.whitelist.joinDescription1')}
           <br />
           {t('otto.whitelist.joinDescription2')}
-        </Typography>
+        </p>
         <RoundedButton href="https://discord.gg/otterclam" type="solid" text={t('otto.whitelist.joinButton')} />
       </div>
       {!isTablet && (

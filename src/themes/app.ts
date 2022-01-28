@@ -1,5 +1,4 @@
-import { createTheme, responsiveFontSizes, Theme as MuiTheme } from '@material-ui/core/styles';
-import commonSettings from './global';
+import { Theme as MuiTheme } from '@material-ui/core/styles'
 
 const colorPalette = {
   common: {
@@ -58,91 +57,19 @@ const colorPalette = {
       },
     },
   },
-};
+}
 
 declare module '@material-ui/core/styles/createPalette' {
   interface Palette {
-    otter: typeof colorPalette['common'];
-    mode: typeof colorPalette['light'];
+    otter: typeof colorPalette['common']
+    mode: typeof colorPalette['light']
   }
   interface PaletteOptions {
-    otter: typeof colorPalette['common'];
-    mode: typeof colorPalette['light'];
+    otter: typeof colorPalette['common']
+    mode: typeof colorPalette['light']
   }
 }
 
 export interface Theme extends MuiTheme {
-  otter: typeof colorPalette['common'];
+  otter: typeof colorPalette['common']
 }
-
-export const light = responsiveFontSizes(
-  createTheme(
-    {
-      palette: {
-        type: 'light',
-        otter: colorPalette.common,
-        mode: colorPalette.light,
-        primary: {
-          main: colorPalette.light.otterDark,
-        },
-        secondary: {
-          main: colorPalette.light.darkGray200,
-        },
-        background: {
-          default: colorPalette.light.lightGray100,
-          paper: colorPalette.light.white,
-        },
-        text: {
-          primary: colorPalette.light.otterDark,
-          secondary: colorPalette.common.clamPink,
-          hint: colorPalette.common.white,
-          disabled: colorPalette.light.darkGray200,
-        },
-      },
-      overrides: {
-        MuiDrawer: {
-          paperAnchorLeft: {
-            backgroundColor: colorPalette.light.white,
-          },
-        },
-      },
-    },
-    commonSettings,
-  ),
-);
-
-export const dark = responsiveFontSizes(
-  createTheme(
-    {
-      palette: {
-        type: 'dark',
-        otter: colorPalette.common,
-        mode: colorPalette.dark,
-        primary: {
-          main: colorPalette.dark.otterDark,
-        },
-        secondary: {
-          main: colorPalette.dark.darkGray200,
-        },
-        background: {
-          default: colorPalette.dark.lightGray100,
-          paper: colorPalette.dark.white,
-        },
-        text: {
-          primary: colorPalette.dark.otterDark,
-          secondary: colorPalette.common.clamPink,
-          hint: colorPalette.common.white,
-          disabled: colorPalette.dark.darkGray200,
-        },
-      },
-      overrides: {
-        MuiDrawer: {
-          paperAnchorLeft: {
-            backgroundColor: colorPalette.dark.white,
-          },
-        },
-      },
-    },
-    commonSettings,
-  ),
-);

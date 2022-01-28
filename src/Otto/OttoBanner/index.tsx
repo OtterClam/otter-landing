@@ -31,9 +31,27 @@ const OttoBanner = () => {
         <h3 className="otto-banner__slogan">{t('otto.banner.slogan')}</h3>
         <h4 className="otto-banner__description">{t('otto.banner.description')}</h4>
         <div className="otto-banner__buttons">
-          <RoundedButton href="https://t.me/otterclam_official" type="outline" icon={TelegramIcon} text="Telegram" />
-          <RoundedButton href="https://discord.gg/otterclam" type="outline" icon={DiscordIcon} text="Discord" />
-          <RoundedButton href="https://twitter.com/otterclam" type="outline" icon={TwitterIcon} text="Twitter" />
+          <RoundedButton
+            href="https://t.me/otterclam_official"
+            type="outline"
+            icon={TelegramIcon}
+            text="Telegram"
+            iconSvgProps={{ viewBox: '0 0 32 32' }}
+          />
+          <RoundedButton
+            href="https://discord.gg/otterclam"
+            type="outline"
+            icon={DiscordIcon}
+            text="Discord"
+            iconSvgProps={{ viewBox: '0 0 32 32' }}
+          />
+          <RoundedButton
+            href="https://twitter.com/otterclam"
+            type="outline"
+            icon={TwitterIcon}
+            text="Twitter"
+            iconSvgProps={{ viewBox: '0 0 32 32' }}
+          />
         </div>
       </div>
       <div className="otto-banner__section right">

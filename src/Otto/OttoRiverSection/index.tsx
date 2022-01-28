@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const OtterPondSection = () => {
+const OtterRiverSection = () => {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
@@ -36,4 +36,4 @@ const OtterPondSection = () => {
     </ImageTextSection>
   )
 }
-export default OtterPondSection
+export default OtterRiverSection

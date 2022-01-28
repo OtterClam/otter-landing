@@ -74,7 +74,7 @@ const OttoTypeSection = () => {
   )
   return (
     <div className={`otto-type__container container ${classes.container}`}>
-      <Typography className={classes.h4}>{t('otto.type.title')}</Typography>
+      <h4 className={classes.h4}>{t('otto.type.title')}</h4>
       <div className={`otto-type__cards`}>
         {OTTO_TYPE_METADATA.map((metadata) => {
           return <OttoTypeCard key={metadata.name} metadata={metadata} />

@@ -3,7 +3,7 @@ import { Box } from '@material-ui/core'
 import Image from 'next/image'
 
 interface ImageProps {
-  imgSrc: string
+  imgSrc: string | StaticImageData
 }
 const ImageSection = ({ imgSrc }: ImageProps) => {
   return <Image className="image-text__image" src={imgSrc} alt="" />
