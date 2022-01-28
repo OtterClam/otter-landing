@@ -1,0 +1,900 @@
+@import './fonts.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gilroy';
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Otto Page Global Style */
+
+.container {
+  padding: 94px 245px;
+}
+
+.otto-rounded-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border-radius: 22px;
+  padding: 0 30px;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.image-text {
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 44px;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    &__h4 {
+      font-size: 48px;
+      font-weight: 800;
+      text-align: center;
+      margin: 0;
+    }
+    &__h5 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 54px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    &__body1 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+    &__slogan {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    padding: 100px 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .image-text {
+    &__section {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 40px;
+      text-align: center;
+    }
+    &__content {
+      &__h4 {
+        font-size: 36px;
+      }
+      &__h5 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      &__body1 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &__slogan {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .container {
+    padding: 40px 20px;
+  }
+  .custom-button {
+    padding: 10px 20px;
+  }
+}
+
+.icon-button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.otto-usage {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+}
+
+.otto-usage-card {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__content {
+    font-weight: 400;
+    text-align: center;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .otto-usage {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .otto-usage {
+    &__cards {
+      grid-template-columns: auto;
+      grid-column-gap: 0;
+    }
+  }
+  .otto-usage-card {
+    &__container {
+      padding: 20px;
+    }
+  }
+}
+
+.otto-banner {
+  &__container {
+    display: flex;
+    padding-top: 145px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (max-width: 598px) {
+      justify-content: center;
+    }
+  }
+
+  &__section {
+    flex: 1;
+
+    &.left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 245px;
+      padding-bottom: 40px;
+    }
+    &.right {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  &__title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 90px;
+    margin: 0;
+  }
+  &__slogan {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  &__image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .otto-banner {
+    &__container {
+      flex-direction: column-reverse;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+    &__slogan {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    &__section {
+      &.left {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .otto-banner {
+    &__section {
+      &.left {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+.otto-countdown {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 94px 245px 40px 245px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  &__deco {
+    position: absolute;
+    width: 30%;
+    z-index: -1;
+
+    &.left {
+      top: 0;
+      left: 0;
+    }
+
+    &.right {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  &__content {
+    color: white;
+    font-size: 28px;
+  }
+}
+
+.otto-buy-clam-hint {
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+  }
+  &__content {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 14px 0 20px;
+  }
+  &__highlight {
+    font-size: 16px;
+    line-height: 24px;
+    min-width: 74px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .otto-countdown {
+    &__container {
+      padding: 80px 20px 80px 20px;
+    }
+    &__deco {
+      width: 40%;
+    }
+  }
+  .otto-buy-clam-hint {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__content {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 0 14px 0 20px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    &__highlight {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+
+.otto-get {
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 60px !important;
+  }
+  &__boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+.otto-step-box {
+  &__numberLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  &__image {
+    width: 100%;
+    margin: 30px auto 25px auto;
+  }
+  &__content {
+    white-space: pre-line;
+  }
+  &__button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .otto-get {
+    &__container {
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 20px !important;
+    }
+    &__boxes {
+      grid-template-columns: auto;
+      grid-column-gap: 0px;
+      grid-row-gap: 40px;
+    }
+  }
+}
+
+.otto-header-desktop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  transition: background-color 0.2s, box-shadow 0.2s;
+
+  &__container {
+    width: 100%;
+    padding: 0 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &__section {
+    flex: 1;
+    &.left {
+      flex: 1;
+      align-items: center;
+    }
+    &.right {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 40px !important;
+    white-space: nowrap;
+  }
+
+  #lang-picker {
+    margin-left: 20px;
+
+    .custom-button {
+      border: none;
+    }
+  }
+}
+
+.otto-header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &__image {
+    height: 40px;
+    width: auto;
+  }
+  &__text {
+    // NOTE: overwrite mui typography style
+    font-size: 20px !important;
+    margin-left: 16px !important;
+    font-weight: 700 !important;
+  }
+}
+
+.otto-header-tablet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  &__patch {
+    width: 24px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+  }
+  &__menu-link {
+    margin-bottom: 40px !important;
+  }
+}
+
+.menu-button {
+  position: fixed;
+  top: 20px;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 1;
+
+  &__top-line-style,
+  &__middle-line-style,
+  &__bottom-line-style {
+    width: 18px;
+    height: 2px;
+    margin: 3px;
+    background-color: black;
+    transition: 0.3s;
+  }
+
+  &__top-line-style {
+    &.open {
+      transform: rotate(45deg) translateY(6.5px);
+    }
+  }
+
+  &__middle-line-style {
+    &.open {
+      opacity: 0;
+    }
+  }
+
+  &__bottom-line-style {
+    &.open {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+}
+
+.otto-type {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+}
+
+.otto-card {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__count-box {
+    padding: 20px 10px;
+  }
+  &__h5 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  &__body2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &__countBox {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .otto-type {
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .otto-type {
+    &__cards {
+      grid-template-columns: auto;
+    }
+  }
+  .otto-card {
+    &__container {
+      padding: 20px;
+    }
+    &__body2 {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    &__h5 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+.otto-whitelist {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    padding: 80px;
+    gap: 8px;
+  }
+  &__image {
+    width: 30%;
+  }
+  &__tablet-image {
+    width: 100%;
+  }
+  .custom-button {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .otto-whitelist {
+    &__container {
+      flex-direction: column;
+    }
+    &__content {
+      padding: 10px 40px 40px 40px;
+    }
+  }
+}
+
+.footer {
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 30px;
+    padding: 94px 245px;
+  }
+  &__partnership,
+  &__involved,
+  &__resources {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  &__partnership {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // height: calc(100% - 42px);
+    }
+    &__text {
+      display: flex;
+      flex-direction: row;
+      img {
+        vertical-align: middle;
+      }
+      .audit {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__logo {
+      width: 310px;
+    }
+  }
+  &__links {
+    display: grid;
+    grid-row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 579px) {
+  .footer {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 40px;
+      padding: 40px 20px;
+    }
+    &__partnership,
+    &__involved,
+    &__resources {
+      align-items: center;
+      text-align: center;
+    }
+    &__partnership {
+      &__text {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+        .audit {
+          margin-left: 0;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+/** Customer Button **/
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border-radius: 10px;
+  padding: 0 30px;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+
+  @media screen and (max-width: 598px) {
+    padding: 10px 20px;
+  }
+}
+
+.icon-button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/** Language Picker **/
+#lang-menu-button {
+  padding: 12px;
+  svg {
+    margin-right: 3px;
+    color: inherit !important;
+  }
+}
+
+.buy-text {
+  font-weight: 700;
+}
+
+#lang-popper,
+#lang-popper-pending {
+  z-index: 9999;
+  backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
+  margin-top: 10px;
+  border-radius: 10px;
+
+  .MuiPaper-root.lang-menu {
+    padding: 16px 6px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    max-width: 200px;
+    border-radius: 10px;
+    button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 4px;
+      padding-left: 16px;
+    }
+    a {
+      svg {
+        vertical-align: middle;
+        font-size: 20px;
+        margin-left: 3px;
+      }
+    }
+    hr {
+      margin-bottom: 18px;
+    }
+  }
+
+  .add-tokens {
+    > p {
+      margin: 15px 0px;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+  .buy-tokens {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+    .select-language {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  .select-language {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  .select-language:hover {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+}
+
+.wallet-menu {
+  display: flex;
+}
+.lang-button-border-true {
+  cursor: pointer;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  border: 2px solid;
+  border-radius: 10px;
+
+  p {
+    font-size: 16px;
+  }
+}
+.lang-button-border-false {
+  cursor: pointer;
+  width: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  width: 44px;
+  border: 0px transparent !important;
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .lang-button-border-true,
+  .lang-button-border-false {
+    // width: 44px;
+    svg {
+      margin-left: 0px;
+    }
+  }
+  #wallet-menu {
+    .language-button {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+  }
+}
