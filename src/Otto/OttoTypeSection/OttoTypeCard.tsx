@@ -9,15 +9,57 @@ import OttoVXImage from './otto_vx.jpg'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
-  card: {
+  container: {
     backgroundColor: theme.palette.mode.white,
     borderRadius: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    padding: '40px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '20px',
+    },
+  },
+  image: {
+    width: '100%',
+    marginBottom: '15px',
   },
   h5: {
     color: theme.palette.mode.otterDark,
+    fontSize: '20px',
+    fontWeight: 700,
+    textAlign: 'center',
+    lineHeight: '30px',
+    margin: 0,
+    marginBottom: '15px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      lineHeight: '28px',
+    },
+  },
+  body1: {
+    fontSize: '24px',
+    fontWeight: 700,
+    lineHeight: '36px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '20px',
+      lineHeight: '30px',
+    },
+  },
+  body2: {
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: '22px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+      lineHeight: '18px',
+    },
   },
   countBox: {
     backgroundColor: theme.palette.mode.lightGray300,
+    borderRadius: '10px',
+    padding: '10px 20px',
+    marginTop: '15px',
   },
 }))
 
@@ -40,7 +82,7 @@ const OttoImage = ({ className, type }: ImageProps) => {
         return OttoVXImage
     }
   })()
-  return <Image className={className} src={imgSrc} alt={type} />
+  return <div className={className}><Image src={imgSrc} alt={type} /></div>
 }
 
 interface Props {
@@ -50,15 +92,15 @@ const OttoTypeCard = ({ metadata }: Props) => {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={`otto-card__container ${classes.card}`}>
+    <div className={`${classes.container} ${classes.container}`}>
       <div>
-        <h5 className={`otto-card__h5 ${classes.h5}`}>{metadata.name}</h5>
-        <OttoImage className="otto-card__image" type={metadata.type} />
-        <p className="otto-card__body2">{metadata.description}</p>
+        <h5 className={classes.h5}>{metadata.name}</h5>
+        <OttoImage className={classes.image} type={metadata.type} />
+        <p className={classes.body2}>{metadata.description}</p>
       </div>
-      <div className={`otto-card__countBox ${classes.countBox}`}>
-        <p className="otto-card__body2">{t('otto.type.population')}</p>
-        {metadata.total === null ? t('otto.type.comingSoon') : `0 / ${metadata.total}`}
+      <div className={`${classes.countBox} ${classes.countBox}`}>
+        <p className={classes.body2}>{t('otto.type.population')}</p>
+        <p className={classes.body1}>{metadata.total === null ? t('otto.type.comingSoon') : `0 / ${metadata.total}`}</p>
       </div>
     </div>
   )
