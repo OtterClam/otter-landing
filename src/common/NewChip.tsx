@@ -5,10 +5,11 @@ type BoxStyle = BoxProps['sx'];
 const baseStyles: BoxStyle = {
   display: 'inline-block',
   color: 'otter.white',
-  bgcolor: 'text.secondary',
-  fontSize: 12,
+  bgcolor: 'otter.clamPink',
+  fontSize: '12px',
   fontWeight: 400,
-  padding: '2px 5px',
+  lineHeight: '18px',
+  padding: '0 5px',
   borderRadius: '4px',
 };
 
