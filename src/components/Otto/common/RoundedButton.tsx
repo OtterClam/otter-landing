@@ -31,10 +31,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '',
     color: theme.palette.mode.otterDark,
   },
+  disable: {
+    backgroundColor: theme.palette.mode.lightGray400,
+    color: theme.palette.otter.white,
+    cursor: 'not-allowed',
+  }
 }))
 
 type BoxProps = ComponentProps<typeof Box>
-type ButtonType = 'outline' | 'solid' | 'icon'
+export type ButtonType = 'outline' | 'solid' | 'icon' | 'disable'
 type Props = BoxProps & {
   text?: string
   href?: string
