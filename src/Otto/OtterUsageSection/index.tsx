@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import OttoUsageCard from './OttoUsageCard'
 import { OttoUsageMetadata } from './type'
 
@@ -60,9 +60,9 @@ const OtterUsageSection = () => {
 
   return (
     <div className={`container ${classes.container}`}>
-      <Typography className={classes.h4} variant="h4">
+      <h4 className={classes.h4}>
         {t('otto.usage.title')}
-      </Typography>
+      </h4>
       <div className={classes.cards}>
         {OTTO_USAGE_METADATA.map((metadata) => (
           <OttoUsageCard key={metadata.type} metadata={metadata} />
