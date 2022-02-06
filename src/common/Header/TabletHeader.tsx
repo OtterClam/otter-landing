@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16px',
     fontWeight: 700,
     marginBottom: '40px',
+    color: theme.palette.mode.otterDark
   },
   menuButton: {
     position: 'fixed',

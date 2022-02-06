@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core"
-import OttoHeader from 'src/components/Otto/OttoHeader'
+import Header from 'src/common/Header'
 import OttoBanner from 'src/components/Otto/OttoBanner'
 import OttoWhitelistSection from 'src/components/Otto/OttoWhitelistSection'
 import OttoGetSection from 'src/components/Otto/OttoGetSection'
@@ -21,7 +21,7 @@ const OttoView = () => {
   const classes = useStyles()
   return (
     <div className={classes.view}>
-      <OttoHeader />
+      <Header />
       <OttoBanner />
       <OttoWhitelistSection />
       <OttoGetSection />

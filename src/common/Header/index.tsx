@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMediaQuery } from '@material-ui/core'
-import OttoDesktopHeader from './OttoDesktopHeader'
-import OttoTabletHeader from './OttoTabletHeader'
+import DesktopHeader from './DesktopHeader'
+import TabletHeader from './TabletHeader'
 import { LinkMetadata } from './type'
 
 const customMediaQuery = '(max-width: 1300px)'
@@ -20,6 +20,6 @@ export default function OttoHeader() {
     []
   )
 
-  if (isTablet) return <OttoTabletHeader linkMetadata={MENU_LINKS} />
-  return <OttoDesktopHeader linkMetadata={MENU_LINKS} />
+  if (isTablet) return <TabletHeader linkMetadata={MENU_LINKS} />
+  return <DesktopHeader linkMetadata={MENU_LINKS} />
 }

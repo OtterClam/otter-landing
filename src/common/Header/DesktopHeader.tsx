@@ -1,4 +1,4 @@
-import { Link, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { LandingPageLink } from 'src/constants';
 import { LinkMetadata } from './type';
 import NewChip from 'src/common/NewChip';
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     marginLeft: '40px',
     whiteSpace: 'nowrap',
+    color: theme.palette.mode.otterDark,
     fontSize: '16px',
     fontWeight: 700,
     lineHeight: '24px',
