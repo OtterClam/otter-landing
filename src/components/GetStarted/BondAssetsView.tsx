@@ -41,10 +41,10 @@ const BondAssetsView = () => {
         </ImageContainer>
       </SubContainer>
       <ButtonGridBox>
-        <RoundedButton href="/FAKE/bond-assets" text="Bond Assets Now" />
+        <RoundedButton href="https://app.otterclam.finance/#/bonds" text="Bond Assets Now" />
         <RoundedButton
           type="outline"
-          href="/FAKE/mechanics"
+          href="https://docs.otterclam.finance/basics/bonding/what-is-4-4-bonding"
           text="Read Full Mechanics"
         />
       </ButtonGridBox>

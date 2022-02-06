@@ -83,10 +83,10 @@ const HoldPearlsView = () => {
         </ImageContainer>
       </SubContainer>
       <ButtonGridBox>
-        <RoundedButton href="/FAKE/wrap-pearls" text="Wrap PEARLs Now" />
+        <RoundedButton href="https://app.otterclam.finance/#/wrap" text="Wrap PEARLs Now" />
         <RoundedButton
           type="outline"
-          href="/FAKE/mechanics"
+          href="https://docs.otterclam.finance/basics/pearl"
           text="Read Full Mechanics"
         />
       </ButtonGridBox>

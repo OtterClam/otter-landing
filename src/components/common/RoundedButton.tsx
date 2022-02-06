@@ -43,6 +43,7 @@ export type ButtonType = 'outline' | 'solid' | 'icon' | 'disable'
 type Props = BoxProps & {
   text?: string
   href?: string
+  target?: string
   type?: ButtonType
   // icon?: string | StaticImageData
   icon?: ElementType<any>
@@ -52,10 +53,10 @@ type Props = BoxProps & {
 const ICON_BASE_STYLE: CSSProperties = { width: '20px', height: '20px', verticalAlign: 'middle' }
 const ICON_SPACING: CSSProperties = { marginRight: '10px', marginLeft: '-10px' }
 
-const RoundedButton = ({ type = 'solid', className = '', text, href, icon, iconSvgProps, ...boxProps }: Props) => {
+const RoundedButton = ({ type = 'solid', className = '', text, href, target = '_blank', icon, iconSvgProps, ...boxProps }: Props) => {
   const classes = useStyles();
   return (
-    <a href={href} target="__blank">
+    <a href={href} target={target}>
       <Box className={`${classes.button} ${classes[type]} ${className}`} {...boxProps}>
         {icon && <SvgIcon component={icon} style={{ ...ICON_BASE_STYLE, ...ICON_SPACING }} {...iconSvgProps} />}
         <p>{text}</p>

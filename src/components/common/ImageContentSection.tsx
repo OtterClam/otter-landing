@@ -78,6 +78,7 @@ type ButtonProps = {
   type: ButtonType;
   text: string;
   href?: string;
+  target?: string;
 };
 interface ContentProps {
   textProps: TextProps;

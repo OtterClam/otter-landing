@@ -36,7 +36,7 @@ const ImageContentSections = () => {
       />
       <ImageContentSection
         layout="image-left"
-        buttonProps={{ type: 'solid', text: 'Go to Otto', href: '/otto' }}
+        buttonProps={{ type: 'solid', text: 'Go to Otto', href: '/otto', target: '_self' }}
         textProps={{
           sizing: 'rightPadding',
           title: 'Otto NFTs',
@@ -52,7 +52,7 @@ const ImageContentSections = () => {
       />
       <ImageContentSection
         layout="image-right"
-        buttonProps={{ type: 'solid', text: 'Go to Bank', href: '/bank' }}
+        buttonProps={{ type: 'solid', text: 'Go to Bank', href: 'https://app.otterclam.finance/#/dashboard' }}
         textProps={{
           sizing: 'leftPadding',
           title: 'OtterClam Bank',
@@ -71,7 +71,7 @@ const ImageContentSections = () => {
         buttonProps={{
           type: 'solid',
           text: 'Go to SandBox',
-          href: '/sand-box',
+          href: 'https://www.sandbox.game/en/estates/624/',
         }}
         textProps={{
           sizing: 'rightPadding',

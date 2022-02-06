@@ -84,10 +84,10 @@ const StakeClamsView = () => {
         </HintText>
       </SubContainer>
       <ButtonGridBox>
-        <RoundedButton href="/FAKE/stake-clams" text="Stake CLAMs Now" />
+        <RoundedButton href="https://app.otterclam.finance/#/stake" text="Stake CLAMs Now" />
         <RoundedButton
           type="outline"
-          href="/FAKE/mechanics"
+          href="https://docs.otterclam.finance/basics/staking"
           text="Read Full Mechanics"
         />
       </ButtonGridBox>

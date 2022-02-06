@@ -130,10 +130,10 @@ const LockPearlsView = () => {
         ))}
       </NoteGridBox>
       <ButtonGridBox>
-        <RoundedButton href="/FAKE/lock-pearls" text="Lock PEARLs Now" />
+        <RoundedButton href="https://app.otterclam.finance/#/pearl-chests?tab=lockup" text="Lock PEARLs Now" />
         <RoundedButton
           type="outline"
-          href="/FAKE/mechanics"
+          href="https://otterclam.medium.com/introducing-pearl-chests-and-pearl-notes-70a61748963f"
           text="Read Full Mechanics"
         />
       </ButtonGridBox>
