@@ -42,9 +42,19 @@ function LanguagePicker(props: Props) {
   }
   const useStyles = makeStyles((theme) => ({
     popperMenu: {
+      position: 'fixed',
+      top: '0px',
+      transform: 'translateX(-50%)',
       '& .select-language:hover': {
         backgroundColor: theme.palette.mode.lightGray200,
       },
+    },
+    buttonBox: {
+      display: 'grid',
+      gridRowGap: '4px',
+    },
+    button: {
+      fontSize: '16px'
     },
     colour: {
       '& path': {
@@ -78,21 +88,21 @@ function LanguagePicker(props: Props) {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={400}>
             <Paper className={`${styles.popperMenu} ohm-menu`} elevation={1}>
-              <Box component="div" className="buy-tokens">
+              <Box component="div" className={`${styles.buttonBox} buy-tokens`}>
                 {Object.keys(lngs).map((lng) => (
                   <Button
                     key={lng}
                     style={{ fontWeight: getStyle(lng) }}
                     type="submit"
                     onClick={(e) => handleClick(e, lng)}
-                    className="select-language"
+                    className={`select-language ${styles.button}`}
                   >
                     {lngs[lng].nativeName}
                   </Button>
                 ))}
 
                 <Divider color="secondary" />
-                <Button className="select-language" onClick={(e) => showTranslations(i18n)}>
+                <Button className={`select-language ${styles.button}`} onClick={(e) => showTranslations(i18n)}>
                   {t('common.helpTranslate')}
                 </Button>
               </Box>
