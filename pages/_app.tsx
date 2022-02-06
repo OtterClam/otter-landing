@@ -1,5 +1,6 @@
 import { ThemeProvider as MUIThemeProvider } from '@material-ui/core'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import Footer from "src/common/Footer"
 import type { AppProps } from 'next/app'
 
 import 'src/i18n'
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <StyledThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <Footer />
       </StyledThemeProvider>
     </MUIThemeProvider>
   )

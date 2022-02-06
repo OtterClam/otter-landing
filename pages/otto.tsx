@@ -9,7 +9,6 @@ import OttoFactorySection from 'src/Otto/OttoFactorySection'
 import OtterRiverSection from 'src/Otto/OttoRiverSection'
 import OttoUsageSection from 'src/Otto/OtterUsageSection'
 import OttoCountdownSection from 'src/Otto/OttoCountdownSection'
-import OttoFooter from 'src/common/Footer'
 
 const useStyles = makeStyles((theme) => ({
   view: {
@@ -32,7 +31,6 @@ const OttoView = () => {
       <OtterRiverSection />
       <OttoUsageSection />
       <OttoCountdownSection />
-      <OttoFooter />
     </div>
   )
 }
