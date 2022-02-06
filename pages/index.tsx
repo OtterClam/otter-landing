@@ -6,7 +6,7 @@ import HomeBanner from 'src/components/Home/HomeBanner';
 import AboutOtterSection from 'src/components/Home/AboutOtterSection';
 import ImageContentSections from 'src/components/Home/ImageContentSections';
 import GetStartedSection from 'src/components/Home/GetStartedSection';
-import JoinCommunitySection from "src/components/Home/JoinCommunitySection";
+import JoinCommunitySection from 'src/components/Home/JoinCommunitySection';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.common.white};
