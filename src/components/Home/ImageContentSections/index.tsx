@@ -52,6 +52,7 @@ const ImageContentSections = () => {
       />
       <ImageContentSection
         layout="image-right"
+        hasDeco={true}
         buttonProps={{ type: 'solid', text: 'Go to Bank', href: 'https://app.otterclam.finance/#/dashboard' }}
         textProps={{
           sizing: 'leftPadding',

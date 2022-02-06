@@ -6,6 +6,7 @@ import {
   RightPaddingContainer,
 } from 'src/components/common/Container';
 import Image from 'next/image';
+import ImageBankDeco from 'src/components/Home/ImageContentSections/images/image-bank_deco.png';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
 import RoundedButton, { ButtonType } from './RoundedButton';
 
@@ -68,6 +69,13 @@ const ContentContainer = styled.div`
     text-align: center;
   }
 `;
+const DecoContainer = styled.div`
+  position: relative;
+  margin: 0;
+  @media ${tabletMediaQuery} {
+    margin: auto;
+  }
+`;
 
 type TextProps = {
   sizing: Sizing;
@@ -81,13 +89,30 @@ type ButtonProps = {
   target?: string;
 };
 interface ContentProps {
+  hasDeco?: boolean;
   textProps: TextProps;
   buttonProps: ButtonProps;
 }
-const ContentSection = ({ textProps, buttonProps }: ContentProps) => {
+const ContentSection = ({
+  hasDeco = false,
+  textProps,
+  buttonProps,
+}: ContentProps) => {
   return (
     <_Container sizing={textProps.sizing}>
       <ContentContainer>
+        {hasDeco && (
+          <DecoContainer>
+            <Image
+              src={ImageBankDeco.src}
+              height={32}
+              width={116}
+              layout="fixed"
+              objectFit="contain"
+              alt="deco"
+            />
+          </DecoContainer>
+        )}
         <StyledH2>{textProps.title}</StyledH2>
         <StyledP>{textProps.content}</StyledP>
         <RoundedButton {...buttonProps} />
@@ -123,12 +148,14 @@ const ReverseParentGridBox = styled.div`
 type Layout = 'image-left' | 'image-right';
 interface Props {
   layout?: Layout;
+  hasDeco?: boolean;
   textProps: TextProps;
   buttonProps: ButtonProps;
   imageProps: ImageProps;
 }
 const ImageContentSection = ({
   layout = 'image-left',
+  hasDeco,
   textProps,
   buttonProps,
   imageProps,
@@ -136,14 +163,22 @@ const ImageContentSection = ({
   if (layout === 'image-right')
     return (
       <ParentGridBox className="image-content">
-        <ContentSection textProps={textProps} buttonProps={buttonProps} />
+        <ContentSection
+          hasDeco={hasDeco}
+          textProps={textProps}
+          buttonProps={buttonProps}
+        />
         <ImageSection {...imageProps} />
       </ParentGridBox>
     );
   return (
     <ReverseParentGridBox className="image-content">
       <ImageSection {...imageProps} />
-      <ContentSection textProps={textProps} buttonProps={buttonProps} />
+      <ContentSection
+        hasDeco={hasDeco}
+        textProps={textProps}
+        buttonProps={buttonProps}
+      />
     </ReverseParentGridBox>
   );
 };
