@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { makeStyles, useMediaQuery } from '@material-ui/core';
-import RoundedButton from '../common/RoundedButton';
+import RoundedButton from '../../common/RoundedButton';
 import WhiteListRightBg from './background-otto_whitelist_right.png';
 import WhiteListLeftBg from './background-otto_whitelist_left.png';
 import WhiteListTopBg from './background-otto_whitelist_top.png';

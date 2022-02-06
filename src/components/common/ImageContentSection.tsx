@@ -7,7 +7,7 @@ import {
 } from 'src/components/common/Container';
 import Image from 'next/image';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
-import RoundedButton, { ButtonType } from '../Otto/common/RoundedButton';
+import RoundedButton, { ButtonType } from './RoundedButton';
 
 const FullSizeContainer = styled.div<{ $imageRatio: number }>`
   position: relative;

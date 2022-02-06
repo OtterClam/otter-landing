@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core'
-import RoundedButton from '../common/RoundedButton'
+import RoundedButton from '../../common/RoundedButton'
 import { DescriptionMetadata } from './type'
 import ImageStep1 from './step1.png'
 import ImageStep2 from './step2.png'

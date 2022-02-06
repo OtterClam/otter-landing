@@ -6,7 +6,7 @@ import TwitterIcon from 'public/icons/twitter.svg'
 import OttoHeroImage from './otto_hero.png'
 import OttoHeroBackground from './background-banner.png'
 
-import RoundedButton from '../common/RoundedButton'
+import RoundedButton from '../../common/RoundedButton'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
