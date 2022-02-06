@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction, useState } from 'react';
-import { Link, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { LandingPageLink } from 'src/constants';
 import { LinkMetadata } from './type';
+import Link from "next/link";
 import NewChip from 'src/common/NewChip';
 import LanguagePicker from 'src/common/LanguagePicker';
 import Logo from './Logo';
@@ -113,11 +114,11 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
       <div className={classes.container}>
         <div className={classes.patch} />
         <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <div>
-          <a href={LandingPageLink} className="otto-header-logo">
+        <Link href='/'>
+          <a className="otto-header-logo">
             <Logo />
           </a>
-        </div>
+        </Link>
         <LanguagePicker border={false} />
       </div>
       {menuOpen && (
@@ -132,7 +133,7 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
               </a>
             </div>
             {linkMetadata.map((metadata) => (
-              <Link
+              <a
                 key={metadata.text}
                 className={classes.menuLink}
                 href={metadata.href}
@@ -140,7 +141,7 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
               >
                 {metadata.text}
                 {metadata.new && <NewChip marginLeft="4px" />}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

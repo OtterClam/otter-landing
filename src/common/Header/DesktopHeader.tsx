@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import { LandingPageLink } from 'src/constants';
 import { LinkMetadata } from './type';
+import Link from "next/link";
 import NewChip from 'src/common/NewChip';
 import LanguagePicker from 'src/common/LanguagePicker';
 import Logo from './Logo';
@@ -67,9 +68,11 @@ export default function OttoDesktopHeader({ linkMetadata }: Props) {
     <header className={classes.header}>
       <div className={classes.container}>
         <div className={classes.sectionLeft}>
-          <a href={LandingPageLink} className={classes.logo}>
+          <Link href='/' passHref>
+          <a className={classes.logo}>
             <Logo />
           </a>
+          </Link>
         </div>
         <div className={classes.sectionRight}>
           {linkMetadata.map((metadata, i) => (
