@@ -13,6 +13,7 @@ const LinkGrid = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${props => props.theme.colors.common.otterDark};
   background-color: ${(props) => props.theme.colors.common.white};
   padding: 30px;
   border-radius: 20px;

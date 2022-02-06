@@ -39,10 +39,24 @@ h3 {
     line-height: 36px;
     font-weight: 700;
 }
-p {
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+p, a, li {
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
+}
+a {
+  color: ${props => props.theme.colors.common.otterBlue};
+  &:hover {
+    color: ${props => props.theme.colors.common.otterBlueHover};
+  }
+}
+li {
+  list-style-position: inside;
 }
 
 @media ${tabletMediaQuery} {
@@ -61,7 +75,12 @@ h3 {
     line-height: 30px;
     font-weight: 700;
 }
-p {
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+}
+p, a, li {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
