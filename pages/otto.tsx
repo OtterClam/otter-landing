@@ -1,14 +1,14 @@
 import { makeStyles } from "@material-ui/core"
-import OttoHeader from 'src/Otto/OttoHeader'
-import OttoBanner from 'src/Otto/OttoBanner'
-import OttoWhitelistSection from 'src/Otto/OttoWhitelistSection'
-import OttoGetSection from 'src/Otto/OttoGetSection'
-import OttoTypeSection from 'src/Otto/OttoTypeSection'
-import OttoComponentSection from 'src/Otto/OttoComponentSection'
-import OttoFactorySection from 'src/Otto/OttoFactorySection'
-import OtterRiverSection from 'src/Otto/OttoRiverSection'
-import OttoUsageSection from 'src/Otto/OtterUsageSection'
-import OttoCountdownSection from 'src/Otto/OttoCountdownSection'
+import OttoHeader from 'src/components/Otto/OttoHeader'
+import OttoBanner from 'src/components/Otto/OttoBanner'
+import OttoWhitelistSection from 'src/components/Otto/OttoWhitelistSection'
+import OttoGetSection from 'src/components/Otto/OttoGetSection'
+import OttoTypeSection from 'src/components/Otto/OttoTypeSection'
+import OttoComponentSection from 'src/components/Otto/OttoComponentSection'
+import OttoFactorySection from 'src/components/Otto/OttoFactorySection'
+import OtterRiverSection from 'src/components/Otto/OttoRiverSection'
+import OttoUsageSection from 'src/components/Otto/OtterUsageSection'
+import OttoCountdownSection from 'src/components/Otto/OttoCountdownSection'
 
 const useStyles = makeStyles((theme) => ({
   view: {
