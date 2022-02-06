@@ -50,11 +50,11 @@ const IconGrid = ({ icon, text, href }: IconGridProps) => {
 };
 
 const WAY_GRID_METADATAs = [
-  { icon: IconCLAM, text: 'Buy CLAMs', href: '/get-started/buy-clams'},
-  { icon: IconsCLAM, text: 'Stake CLAMs', href: '/get-started/stake-clams' },
-  { icon: IconPEARL, text: 'Hold PEARLs', href: '/get-started/hold-pearls' },
-  { icon: IconTreasury, text: 'Lock PEARLs', href: '/get-started/lock-pearls' },
-  { icon: IconAssets, text: 'Bond Assets', href: '/get-started/bond-assets' },
+  { icon: IconCLAM, text: 'Buy CLAMs', href: '/get-started?view=buy-clams'},
+  { icon: IconsCLAM, text: 'Stake CLAMs', href: '/get-started?view=stake-clams' },
+  { icon: IconPEARL, text: 'Hold PEARLs', href: '/get-started?view=hold-pearls' },
+  { icon: IconTreasury, text: 'Lock PEARLs', href: '/get-started?view=lock-pearls' },
+  { icon: IconAssets, text: 'Bond Assets', href: '/get-started?view=bond-assets' },
 ];
 
 const GetStartedSection = () => {
