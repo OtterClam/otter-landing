@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   solid: {
     backgroundColor: theme.palette.otter.otterBlue,
-    color: theme.palette.otter.white,
+    color: `${theme.palette.otter.white} !important`,
   },
   icon: {
     border: '2px solid',
