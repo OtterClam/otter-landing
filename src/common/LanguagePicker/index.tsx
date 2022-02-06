@@ -4,7 +4,6 @@ import { Popper, Box, Fade, Button, makeStyles, Paper, useMediaQuery, Divider } 
 import IntlIcon from './intl.svg'
 import { showTranslations } from 'translation-check'
 import CustomButton from 'src/common/Button/CustomButton'
-import { mobileMediaQuery } from 'src/themes/mediaQuery'
 
 //Add new translations to the dropdown here!
 const lngs: any = {
@@ -18,13 +17,6 @@ const lngs: any = {
   tl: { nativeName: 'Tagalog' },
 }
 
-const LangButton = ({ text }: { text: string }) => {
-  const isMobile = useMediaQuery(mobileMediaQuery)
-  if (isMobile) {
-    return <CustomButton type="icon" Icon={IntlIcon} />
-  }
-  return <CustomButton type="solid" color='mode.otterDark' bgcolor='' Icon={IntlIcon} text={`${text}`} />
-}
 interface Props {
   border: Boolean
 }
@@ -83,7 +75,7 @@ function LanguagePicker(props: Props) {
       onMouseLeave={() => handleMouseExit()}
       id="lang-menu-button-hover"
     >
-      <LangButton text={i18n.resolvedLanguage.toUpperCase()} />
+      <CustomButton type="solid" color='mode.otterDark' bgcolor='' Icon={IntlIcon} text={i18n.resolvedLanguage.toUpperCase()} />
       <Popper id={id} open={open} anchorEl={anchorEl} transition>
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={400}>

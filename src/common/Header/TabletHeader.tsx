@@ -113,7 +113,7 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
             <Logo />
           </a>
         </div>
-        <div className={classes.patch} />
+        <LanguagePicker border={false} />
       </div>
       {menuOpen && (
         <div className={classes.menu}>
@@ -136,7 +136,6 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
               {metadata.new && <NewChip marginLeft="4px" />}
             </Link>
           ))}
-          <LanguagePicker border={false} />
         </div>
       )}
     </header>
