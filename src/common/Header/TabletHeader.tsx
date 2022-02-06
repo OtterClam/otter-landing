@@ -27,9 +27,10 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
+    height: '100%',
     position: 'fixed',
     top: 0,
     left: 0,
@@ -37,15 +38,19 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     backgroundColor: 'white',
   },
+  menuContent: {
+    display: 'grid',
+    gridRowGap: '20px',
+  },
   menuLink: {
     fontSize: '16px',
     fontWeight: 700,
-    marginBottom: '40px',
-    color: theme.palette.mode.otterDark
+    textAlign: 'center',
+    color: theme.palette.mode.otterDark,
   },
   menuButton: {
     position: 'fixed',
-    top: '20px',
+    top: '24px',
     width: '24px',
     height: '18px',
     cursor: 'pointer',
@@ -59,13 +64,13 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.3s',
   },
   menuTopLineOpen: {
-    transform: 'rotate(45deg) translateY(6.5px)',
+    transform: 'rotate(45deg) translateY(7.25px)',
   },
   menuMiddleLineOpen: {
     opacity: 0,
   },
   menuBottomLineOpen: {
-    transform: 'rotate(-45deg) translateY(-8px)',
+    transform: 'rotate(-45deg) translateY(-7.25px)',
   },
 }));
 
@@ -117,25 +122,27 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
       </div>
       {menuOpen && (
         <div className={classes.menu}>
-          <div>
-            <a
-              href={LandingPageLink}
-              className="otto-header-tablet__menu-link otto-header-logo"
-            >
-              <Logo />
-            </a>
+          <div className={classes.menuContent}>
+            <div>
+              <a
+                href={LandingPageLink}
+                className="otto-header-tablet__menu-link otto-header-logo"
+              >
+                <Logo />
+              </a>
+            </div>
+            {linkMetadata.map((metadata) => (
+              <Link
+                key={metadata.text}
+                className={classes.menuLink}
+                href={metadata.href}
+                target="__blank"
+              >
+                {metadata.text}
+                {metadata.new && <NewChip marginLeft="4px" />}
+              </Link>
+            ))}
           </div>
-          {linkMetadata.map((metadata) => (
-            <Link
-              key={metadata.text}
-              className={classes.menuLink}
-              href={metadata.href}
-              target="__blank"
-            >
-              {metadata.text}
-              {metadata.new && <NewChip marginLeft="4px" />}
-            </Link>
-          ))}
         </div>
       )}
     </header>
