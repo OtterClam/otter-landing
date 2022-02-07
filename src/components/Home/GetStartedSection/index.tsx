@@ -1,30 +1,48 @@
-import Image from 'next/image';
+import { tabletMediaQuery, laptopMediaQuery } from 'src/themes/mediaQuery';
 import styled from 'styled-components';
-import IconGridsSection from 'src/components/common/IconGridsSection';
+import Image from 'next/image';
+import ImageGetStarted from './images/image-get_started.png';
+import { Container } from 'src/components/common/Container';
+import RoundedButton from 'src/components/common/RoundedButton';
 
-import IconCLAM from './images/icon_token_CLAM.png';
-import IconsCLAM from './images/icon_token_sCLAM.png'; 
-import IconPEARL from './images/icon_token_PEARL.png';
-import IconTreasury from './images/icon_treasury.png';
-import IconAssets from './images/icon_assets.png';
-
-const LinkGrid = styled.a`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${props => props.theme.colors.common.otterDark};
-  background-color: ${(props) => props.theme.colors.common.white};
-  padding: 30px;
-  border-radius: 20px;
-  transition: 0.25s;
-  &:hover {
-    transform: translateY(-4px);
-    background-color: ${(props) => props.theme.colors.light.lightGray200};
+const StyledContainer = styled(Container)`
+  background-color: ${(props) => props.theme.colors.common.otterDark};
+`;
+const StyledH2 = styled.h2`
+  color: ${(props) => props.theme.colors.common.white};
+  text-align: center;
+`;
+const StyledContent = styled.h4`
+  color: ${(props) => props.theme.colors.common.white};
+  margin-bottom: ${(props) => props.theme.spacings.lg};
+  text-align: center;
+  @media ${tabletMediaQuery} {
+    margin-bottom: ${(props) => props.theme.spacings.md};
   }
 `;
-const ImageContainer = styled.div`
-  margin-bottom: ${(props) => props.theme.spacings.md};
+const ColoredSection = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: ${(props) => props.theme.colors.common.otterDark};
+  background-color: ${(props) => props.theme.colors.light.lightGray200};
+  border-radius: 15px;
+  padding: ${(props) =>
+    `${props.theme.spacings.md} ${props.theme.spacings.lg}`};
+  @media ${tabletMediaQuery} {
+    flex-direction: column;
+    text-align: center;
+    padding: ${(props) => props.theme.spacings.md};
+  }
+`;
+const ImageBox = styled.div`
+  margin-right: 40px;
+  @media ${tabletMediaQuery} {
+    margin-right: 0;
+  }
+`;
+const StyledP = styled.p`
+  margin-bottom: 25px;
 `;
 
 interface IconGridProps {
@@ -32,46 +50,37 @@ interface IconGridProps {
   text: string;
   href: string;
 }
-const IconGrid = ({ icon, text, href }: IconGridProps) => {
-  return (
-    <LinkGrid href={href} target='_blank'>
-      <ImageContainer>
-        <Image
-          src={icon.src}
-          width="100px"
-          height="100px"
-          objectFit="contain"
-          alt={text}
-        />
-      </ImageContainer>
-      <p>{text}</p>
-    </LinkGrid>
-  );
-};
-
-const WAY_GRID_METADATAs = [
-  { icon: IconCLAM, text: 'Buy CLAMs', href: '/get-started?view=buy-clams'},
-  { icon: IconsCLAM, text: 'Stake CLAMs', href: '/get-started?view=stake-clams' },
-  { icon: IconPEARL, text: 'Hold PEARLs', href: '/get-started?view=hold-pearls' },
-  { icon: IconTreasury, text: 'Lock PEARLs', href: '/get-started?view=lock-pearls' },
-  { icon: IconAssets, text: 'Bond Assets', href: '/get-started?view=bond-assets' },
-];
 
 const GetStartedSection = () => {
   return (
-      <IconGridsSection
-        title="How to Get Started"
-        content="There are 4 simple ways to earn in the Otter Kingdom."
-        theme="dark"
-        grids={WAY_GRID_METADATAs.map((metadata) => (
-          <IconGrid
-            key={metadata.text}
-            icon={metadata.icon}
-            text={metadata.text}
-            href={metadata.href}
+    <StyledContainer>
+      <StyledH2>How to Get Started</StyledH2>
+      <StyledContent>
+        So you've made it to OtterClam, you like what you see, and you're ready
+        to dive in. Now what? Well, you'll need to get some CLAM to participate
+        in the ecosystem. Although there are many ways for you to take advantage
+        of the platform's various features, you'll need our native currency CLAM
+        to get started.
+      </StyledContent>
+      <ColoredSection>
+        <ImageBox>
+          <Image
+            src={ImageGetStarted.src}
+            layout="intrinsic"
+            width={200}
+            height={168}
+            alt="get started"
           />
-        ))}
-      />
+        </ImageBox>
+        <div>
+          <StyledP>
+            If you’re not sure how to buy CLAM, click the button below and Otter
+            Guide will lead you:
+          </StyledP>
+          <RoundedButton text="Getting Started" href="/get-started" />
+        </div>
+      </ColoredSection>
+    </StyledContainer>
   );
 };
 export default GetStartedSection;
