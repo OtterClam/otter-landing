@@ -3,6 +3,8 @@ import ImageContentSection from 'src/components/common/ImageContentSection';
 import ImageBank from './images/image-bank.png';
 import ImageMarket from './images/image-market.png';
 import ImageOtto from 'src/components/Otto/OttoBanner/otto_hero.png';
+import ImageSandbox from './images/image-sandbox.png';
+import { tabletMediaQuery } from "src/themes/mediaQuery";
 
 const Container = styled.div`
   .image-content {
@@ -14,10 +16,29 @@ const Container = styled.div`
     }
   }
 `;
+const IntroTextSection = styled(Container)`
+color: ${props => props.theme.colors.common.white};
+  background-color: ${props => props.theme.colors.common.otterDark};
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+`;
+
+const StyledH2 = styled.h2`
+  font-size: 36px;
+  line-height: 54px;
+  @media ${tabletMediaQuery} {
+    font-size: 24px;
+    line-height: 36px;
+  }
+`;
 
 const ImageContentSections = () => {
   return (
     <Container>
+      <IntroTextSection>
+      <StyledH2>Here we introduce our core features that you can explore...</StyledH2>
+      </IntroTextSection>
       <ImageContentSection
         layout="image-right"
         buttonProps={{ text: 'Coming Soon', type: 'disable' }}
@@ -28,9 +49,9 @@ const ImageContentSections = () => {
             'Our market will be open and permissionless, so you can bring over your personal portfolio, or add to your collection from our own, in-house created NFT selection.',
         }}
         imageProps={{
-          sizing: 'full',
+          sizing: 'rightPadding',
           imageRatio: 100,
-          src: ImageMarket.src,
+          image: ImageMarket,
           alt: 'market',
         }}
       />
@@ -46,24 +67,24 @@ const ImageContentSections = () => {
         imageProps={{
           sizing: 'full',
           imageRatio: 87.5,
-          src: ImageOtto.src,
+          image: ImageOtto,
           alt: 'otto',
         }}
       />
       <ImageContentSection
         layout="image-right"
         hasDeco={true}
-        buttonProps={{ type: 'solid', text: 'Go to Bank', href: 'https://app.otterclam.finance/#/dashboard' }}
+        buttonProps={{ type: 'solid', text: 'Go to Bank', href: 'https://app.otterclam.finance/#/' }}
         textProps={{
           sizing: 'leftPadding',
-          title: 'OtterClam Bank',
+          title: 'OtterClam Treasury',
           content:
-            'ERC-721 tokens are non-fungible, meaning that every part in your Otto has its unique value and is to be treated individually. Unlike ERC-20, every single ERC-20 token is equal in value and is identical and inter replaceable.',
+            "Visit the OtterClam Treasury to store your precious PEARLs in your PEARL chests. The longer you lock them up, the greater your APY. Stash enough of them for long enough, and you'll get an NFT that can be used to get bond discounts.",
         }}
         imageProps={{
           sizing: 'full',
           imageRatio: 60,
-          src: ImageBank.src,
+          image: ImageBank,
           alt: 'bank',
         }}
       />
@@ -81,10 +102,10 @@ const ImageContentSections = () => {
             'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
         }}
         imageProps={{
-          sizing: 'full',
-          imageRatio: 87.5,
-          src: ImageOtto.src,
-          alt: 'otto',
+          sizing: 'leftPadding',
+          imageRatio: 0,
+          image: ImageSandbox,
+          alt: 'sandbox',
         }}
       />
     </Container>
