@@ -37,17 +37,19 @@ const _Container = ({
 type ImageProps = {
   sizing: Sizing;
   imageRatio?: number;
-  src: string;
+  image: StaticImageData;
   alt: string;
 };
 
-const ImageSection = ({ sizing, imageRatio, src, alt }: ImageProps) => {
+const ImageSection = ({ sizing, imageRatio, image, alt }: ImageProps) => {
   return (
     <_Container sizing={sizing} imageRatio={imageRatio}>
       <Image
-        src={src}
+        src={image.src}
         alt={alt}
-        layout="fill"
+        layout={sizing === 'full' ? 'fill' : 'responsive'}
+        height={sizing === 'full' ? undefined : image.height}
+        width={sizing === 'full' ? undefined : image.width}
         objectFit={sizing === 'full' ? 'cover' : 'contain'}
       />
     </_Container>
