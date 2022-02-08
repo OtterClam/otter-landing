@@ -1,4 +1,4 @@
-import { tabletMediaQuery, laptopMediaQuery } from 'src/themes/mediaQuery';
+import { tabletMediaQuery } from 'src/themes/mediaQuery';
 import styled from 'styled-components';
 import Image from 'next/image';
 import ImageGetStarted from './images/image-get_started.png';
