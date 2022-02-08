@@ -9,10 +9,33 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme) => ({
   card: {
     backgroundColor: theme.palette.mode.lightGray200,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    borderRadius: '10px',
+    padding: '40px',
+    [theme.breakpoints.down('md')]: {
+      padding: '20px',
+    }
   },
   title: {
     color: theme.palette.mode.otterDark,
+    fontSize: '20px',
+    fontWeight: 700,
+    textAlign: 'center',
+    lineHeight: '30px',
+    margin: '0',
+    marginBottom: '15px',
   },
+  image: {
+    width: '100%'
+  },
+  content: {
+    fontWeight: 400,
+    textAlign: 'center',
+    lineHeight: '22px',
+    marginBottom: '15px',
+  }
 }))
 
 interface ImageProps {
@@ -39,12 +62,12 @@ interface Props {
 const OttoUsageCard = ({ metadata }: Props) => {
   const classes = useStyles()
   return (
-    <div className={`otto-usage-card__container ${classes.card}`}>
+    <div className={classes.card}>
       <div>
-        <h5 className={`${classes.title} otto-usage-card__title`}>{metadata.title}</h5>
-        <p className="otto-usage-card__content">{metadata.content}</p>
+        <h5 className={classes.title}>{metadata.title}</h5>
+        <p className={classes.content}>{metadata.content}</p>
       </div>
-      <UsageImage className="otto-usage-card__image" type={metadata.type} />
+      <UsageImage className={classes.image} type={metadata.type} />
     </div>
   )
 }

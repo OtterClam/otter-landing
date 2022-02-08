@@ -1,18 +1,47 @@
 import { useTranslation } from 'react-i18next'
 import CLAM from 'public/tokens/CLAM.svg'
-import { Link, makeStyles } from '@material-ui/core'
-import Image from 'next/image'
+import { SvgIcon, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.mode.darkGray400,
     border: `2px solid ${theme.palette.mode.darkGray300}`,
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    maxWidth: '560px',
+    padding: '20px',
+    marginTop: '40px',
+    borderRadius: '15px',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+    }
   },
   content: {
     color: theme.palette.mode.white,
+    fontSize: '16px',
+    fontWeight: 700,
+    lineHeight: '24px',
+    padding: '0 14px 0 20px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '14px',
+      lineHeight: '22px',
+      padding: '0 14px 0 20px',
+      marginBottom: '10px',
+      textAlign: 'center'
+    }
   },
   highlight: {
     color: theme.palette.otter.clamPink,
+    fontSize: '16px',
+    fontWeight: 700,
+    lineHeight: '24px',
+    minWidth: '74px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '14px',
+      lineHeight: '22px',
+    }
   },
 }))
 
@@ -20,18 +49,18 @@ const OttoBuyClamHint = () => {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={`otto-buy-clam-hint__container ${classes.container}`}>
+    <div className={classes.container}>
       <div>
-        <CLAM />
+        <SvgIcon component={CLAM} viewBox="0 0 32 32" style={{ height: 60, width: 60 }} />
       </div>
-      <div className={`otto-buy-clam-hint__content ${classes.content}`}>{t('otto.countdown.hintDescription')}</div>
-      <Link
-        className={`otto-buy-clam-hint__highlight ${classes.highlight}`}
+      <div className={classes.content}>{t('otto.countdown.hintDescription')}</div>
+      <a
+        className={classes.highlight}
         target="__blank"
         href="https://quickswap.exchange/#/swap?outputCurrency=0xC250e9987A032ACAC293d838726C511E6E1C029d"
       >
         {t('otto.countdown.buyNow')}
-      </Link>
+      </a>
     </div>
   )
 }

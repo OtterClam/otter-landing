@@ -7,31 +7,53 @@ import ImageStep3 from './step3.png'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    textAlign: 'center',
+  },
   label: {
     color: theme.palette.mode.white,
     backgroundColor: theme.palette.otter.clamPink,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    margin: 'auto',
     fontSize: '24px',
+    fontWeight: 700,
+  },
+  image: {
+    width: '100%',
+    margin: '30px auto 25px auto',
   },
   content: {
     color: theme.palette.mode.otterDark,
     fontSize: '16px',
     lineHeight: '24px',
+    fontWeight: 700,
+    whiteSpace: 'pre-line'
+  },
+  button: {
+    marginTop: '20px',
   },
   highlight: {
     color: theme.palette.otter.clamPink,
     fontSize: '16px',
     lineHeight: '24px',
+    fontWeight: 700,
   },
 }))
 
 const StepImage = ({ number }: { number: number }) => {
+  const classes = useStyles()
   switch (number) {
     case 1:
-      return <Image className="otto-step-box__image" src={ImageStep1} alt="step1" />
+      return <div className={classes.image}><Image src={ImageStep1} alt="step1" /></div>
     case 2:
-      return <Image className="otto-step-box__image" src={ImageStep2} alt="step2" />
+      return <div className={classes.image}><Image src={ImageStep2} alt="step2" /></div>
     case 3:
-      return <Image className="otto-step-box__image" src={ImageStep3} alt="step3" />
+      return <div className={classes.image}><Image src={ImageStep3} alt="step3" /></div>
     default:
       return <></>
   }
@@ -44,8 +66,8 @@ interface Props {
 const OttoStepBox = ({ metadata, number }: Props) => {
   const classes = useStyles()
   return (
-    <div className="otto-step-box__container">
-      <div className={`otto-step-box__numberLabel ${classes.label}`}>{number}</div>
+    <div className={classes.container}>
+      <div className={classes.label}>{number}</div>
       <StepImage number={number} />
       {metadata.description.map((description, index) => {
         if (description.type === 'highlight')
@@ -61,7 +83,7 @@ const OttoStepBox = ({ metadata, number }: Props) => {
           </span>
         )
       })}
-      <div className="otto-step-box__button">
+      <div className={classes.button}>
         <RoundedButton href={metadata.button.href} text={metadata.button.text} />
       </div>
     </div>

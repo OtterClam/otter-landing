@@ -7,15 +7,87 @@ import OttoHeroImage from './otto_hero.png'
 import OttoHeroBackground from './background-banner.png'
 
 import RoundedButton from '../common/RoundedButton'
-import { light } from 'src/themes'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   container: {
     background: `url(${OttoHeroBackground.src}) center/cover no-repeat`,
+    display: 'flex',
+    paddingTop: '145px',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column-reverse',
+      paddingTop: '60px',
+      paddingBottom: '40px',
+      textAlign: 'center',
+    }
+  },
+  sectionLeft: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    paddingLeft: '245px',
+    paddingBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: '100px',
+      paddingRight: '100px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: '30px',
+      paddingRight: '30px',
+    }
+  },
+  sectionRight: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'flex-end'
+  },
+  title: {
+    fontSize: '60px',
+    fontWeight: 800,
+    lineHeight: '90px',
+    margin: 0,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '48px',
+      lineHeight: '72px',
+    }
+  },
+  slogan: {
+    fontSize: '24px',
+    fontWeight: 700,
+    lineHeight: '36px',
+    margin: 0,
+    marginBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+      lineHeight: '30px',
+      marginBottom: '20px',
+    }
+  },
+  description: {
+    fontSize: '20px',
+    lineHeight: '30px',
+    fontWeight: 700,
+    margin: 0,
+    marginBottom: '20px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '18px',
+      lineHeight: '28px',
+    }
+  },
+  buttons: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '20px',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'center'
+    }
+  },
+  image: {
+    width: '100%'
   },
   highlight: {
-    color: light.palette.otter.clamPink,
+    color: theme.palette.otter.clamPink,
   },
 }))
 
@@ -23,14 +95,14 @@ const OttoBanner = () => {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={`otto-banner__container ${classes.container}`}>
-      <div className="otto-banner__section left">
-        <h2 className="otto-banner__title">
+    <div className={classes.container}>
+      <div className={classes.sectionLeft}>
+        <h2 className={classes.title}>
           {t('otto.banner.meet')} <span className={classes.highlight}>{t('otto.banner.otto')}</span>!
         </h2>
-        <h3 className="otto-banner__slogan">{t('otto.banner.slogan')}</h3>
-        <h4 className="otto-banner__description">{t('otto.banner.description')}</h4>
-        <div className="otto-banner__buttons">
+        <h3 className={classes.slogan}>{t('otto.banner.slogan')}</h3>
+        <h4 className={classes.description}>{t('otto.banner.description')}</h4>
+        <div className={classes.buttons}>
           <RoundedButton
             href="https://t.me/otterclam_official"
             type="outline"
@@ -54,8 +126,8 @@ const OttoBanner = () => {
           />
         </div>
       </div>
-      <div className="otto-banner__section right">
-        <Image className="otto-banner__image" src={OttoHeroImage} alt="banner" />
+      <div className={classes.sectionRight}>
+        <Image className={classes.image} src={OttoHeroImage} alt="banner" />
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import OttoTypeCard from './OttoTypeCard'
 import OttoTypeBg from './background-otto_type.png'
 
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     position: 'relative',
     zIndex: 0,
-    backgroundColor: '#0A0E23',
+    backgroundColor: '#0A0E23 !important',
 
     '&::after': {
       content: '""',
@@ -21,17 +21,30 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       height: '100%',
       opacity: 0.1,
-      background: `url(${OttoTypeBg}) center/contain repeat`,
+      background: `url(${OttoTypeBg.src}) top/contain repeat`,
       zIndex: -1,
     },
   },
-  h4: {
+  title: {
     fontSize: '48px',
     fontWeight: 800,
     textAlign: 'center',
     color: theme.palette.otter.white,
     marginBottom: '60px',
   },
+  cards: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridColumnGap: '30px',
+    gridRowGap: '30px',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridRowGap: '20px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      gridTemplateColumns: 'auto',
+    },
+  }
 }))
 
 const OttoTypeSection = () => {
@@ -73,9 +86,9 @@ const OttoTypeSection = () => {
     []
   )
   return (
-    <div className={`otto-type__container container ${classes.container}`}>
-      <h4 className={classes.h4}>{t('otto.type.title')}</h4>
-      <div className={`otto-type__cards`}>
+    <div className={`${classes.container} container`}>
+      <h4 className={classes.title}>{t('otto.type.title')}</h4>
+      <div className={classes.cards}>
         {OTTO_TYPE_METADATA.map((metadata) => {
           return <OttoTypeCard key={metadata.name} metadata={metadata} />
         })}

@@ -23,7 +23,7 @@ const LangButton = ({ text }: { text: string }) => {
   if (isMobile) {
     return <CustomButton type="icon" Icon={IntlIcon} />
   }
-  return <CustomButton type="outline" Icon={IntlIcon} text={`${text}`} />
+  return <CustomButton type="solid" color='mode.otterDark' bgcolor='' Icon={IntlIcon} text={`${text}`} />
 }
 interface Props {
   border: Boolean

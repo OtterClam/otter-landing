@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import OttoUsageCard from './OttoUsageCard'
 import { OttoUsageMetadata } from './type'
 
@@ -8,12 +8,29 @@ const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.mode.white,
   },
+  cards: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridColumnGap: '30px',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridColumnGap: '20px',
+      gridRowGap: '20px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      gridTemplateColumns: 'auto',
+      gridColumnGap: '0px',
+    }
+  },
   h4: {
-    color: theme.palette.mode.otterDark,
     fontSize: '48px',
     fontWeight: 800,
     textAlign: 'center',
+    margin: 0,
     marginBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '36px',
+    },
   },
 }))
 
@@ -42,11 +59,11 @@ const OtterUsageSection = () => {
   )
 
   return (
-    <div className={`otto-usage__container container ${classes.container}`}>
-      <Typography className={classes.h4} variant="h4">
+    <div className={`container ${classes.container}`}>
+      <h4 className={classes.h4}>
         {t('otto.usage.title')}
-      </Typography>
-      <div className="otto-usage__cards">
+      </h4>
+      <div className={classes.cards}>
         {OTTO_USAGE_METADATA.map((metadata) => (
           <OttoUsageCard key={metadata.type} metadata={metadata} />
         ))}

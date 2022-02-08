@@ -1,3 +1,4 @@
+import { makeStyles } from "@material-ui/core"
 import OttoHeader from 'src/Otto/OttoHeader'
 import OttoBanner from 'src/Otto/OttoBanner'
 import OttoWhitelistSection from 'src/Otto/OttoWhitelistSection'
@@ -10,17 +11,17 @@ import OttoUsageSection from 'src/Otto/OtterUsageSection'
 import OttoCountdownSection from 'src/Otto/OttoCountdownSection'
 import OttoFooter from 'src/common/Footer'
 
-// const useStyles = makeStyles((theme) => ({
-//   view: {
-//     backgroundColor: theme.palette.mode.white,
-//     color: theme.palette.mode.otterDark,
-//   },
-// }))
+const useStyles = makeStyles((theme) => ({
+  view: {
+    backgroundColor: theme.palette.mode.white,
+    color: theme.palette.mode.otterDark,
+  },
+}))
 
 const OttoView = () => {
-  // const classes = useStyles()
+  const classes = useStyles()
   return (
-    <div>
+    <div className={classes.view}>
       <OttoHeader />
       <OttoBanner />
       <OttoWhitelistSection />

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Typography, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import OttoStepBox from './OttoStepBox'
 
 import { DescriptionMetadata } from './type'
@@ -8,11 +8,26 @@ import { DescriptionMetadata } from './type'
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: theme.palette.mode.lightGray200,
+    textAlign: 'center',
   },
-  h4: {
+  title: {
     fontSize: '48px',
     fontWeight: 800,
+    marginBottom: '60px',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '20px'
+    },
   },
+  boxes: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr',
+    gridColumnGap: '20px',
+    [theme.breakpoints.down('md')]: {
+      gridTemplateColumns: 'auto',
+      gridColumnGap: '0px',
+      gridRowGap: '40px'
+    },
+  }
 }))
 
 const OttoGetSection = () => {
@@ -52,11 +67,11 @@ const OttoGetSection = () => {
   )
 
   return (
-    <div className={`otto-get__container container ${classes.container}`}>
-      <Typography className={`${classes.h4} otto-get__title`} variant="h4">
+    <div className={`${classes.container} container`}>
+      <h4 className={classes.title}>
         How to get Ottos?
-      </Typography>
-      <div className="otto-get__boxes">
+      </h4>
+      <div className={classes.boxes}>
         {OTTO_STEP_METADATA.map((metadata, index) => (
           <OttoStepBox key={`step-${index}`} metadata={metadata} number={index + 1} />
         ))}
