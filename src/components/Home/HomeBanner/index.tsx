@@ -82,6 +82,7 @@ const StyledH1 = styled.h1`
 `;
 const StyledH3 = styled.h3`
   color: ${(props) => props.theme.colors.common.white};
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
   margin-bottom: ${(props) => props.theme.spacings.md};
 `;
 const StyledArrow = styled(IconArrow)`
