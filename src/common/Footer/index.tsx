@@ -2,7 +2,7 @@ import { Link, makeStyles } from '@material-ui/core';
 import { RESOURCES_LINKS, INVOLVED_LINKS } from './constant';
 import PartnershipLightModeImage from 'public/logo-partnership-light.png';
 import SlowmistLightModeImage from 'public/logo-slowmist-light.png';
-import FooterDeco from './images/deco-footer.png';
+import FooterDeco from './images/deco-footer.webp';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 

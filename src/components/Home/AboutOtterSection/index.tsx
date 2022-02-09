@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import ImageDesktopAboutOtter from './images/desktop-about_otter.png';
-import ImageMobileAboutOtter from './images/mobile-about_otter.png';
+import ImageDesktopAboutOtter from './images/desktop-about_otter.webp';
+import ImageMobileAboutOtter from './images/mobile-about_otter.webp';
 import RoundedButton from 'src/components/common/RoundedButton';
 import { Container } from 'src/components/common/Container';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';

@@ -5,12 +5,12 @@ import { gsap } from 'src/utils/gsap';
 import { useMediaQuery } from '@material-ui/core';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
 
-import ParallaxSky from './images/parallax-fixed_background.jpg';
-import ParallaxBackLand from './images/parallax-back_land.png';
-import ParallaxMiddleLand from './images/parallax-middle_land.png';
-import ParallaxOtters from './images/parallax-otters.png';
-import ParallaxLeft from './images/parallax-front_left.png';
-import ParallaxRight from './images/parallax-front_right.png';
+import ParallaxSky from './images/parallax-fixed_background.webp';
+import ParallaxBackLand from './images/parallax-back_land.webp';
+import ParallaxMiddleLand from './images/parallax-middle_land.webp';
+import ParallaxOtters from './images/parallax-otters.webp';
+import ParallaxLeft from './images/parallax-front_left.webp';
+import ParallaxRight from './images/parallax-front_right.webp';
 import IconArrow from './images/arrow.svg';
 
 const Container = styled.div`
