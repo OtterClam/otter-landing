@@ -10,7 +10,14 @@ const StyledContainer = styled(Container)`
 `;
 const StyledH2 = styled.h2`
   color: ${(props) => props.theme.colors.common.white};
+  font-size: 60px;
+  line-height: 90px;
   text-align: center;
+  @media ${tabletMediaQuery} {
+    font-size: 48px;
+    line-height: 72px;
+    margin-bottom: ${(props) => props.theme.spacings.sm};
+  }
 `;
 const StyledContent = styled.h4`
   color: ${(props) => props.theme.colors.common.white};
