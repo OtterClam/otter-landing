@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
-import { Container } from 'src/components/common/Container';
 import {
   Divider,
   Container as CardContainer,
@@ -61,8 +60,8 @@ const GetStartedView = () => {
       </Title>
       <ContentCard>
         <p>
-          So you've made it to OtterClam, you like what you see, and you're
-          ready to dive in. Now what? Well, you'll need to get some CLAM, the
+          So you’ve made it to OtterClam, you like what you see, and you're
+          ready to dive in. Now what? Well, you’ll need to get some CLAM, the
           native currency of the entire Otter Kingdom ecosystem. Here's how:
         </p>
         <Divider />
@@ -145,13 +144,13 @@ const GetStartedView = () => {
         </p>
         <HintText>
           Note: because some countries consider each rebase reward a taxable
-          event, wrapping your sCLAM avoids this issue. Your PEARL's value will
+          event, wrapping your sCLAM avoids this issue. Your PEARL’s value will
           reflect the rebase rewards of your staked CLAM.
         </HintText>
         <Divider />
         <h3>Lock PEARL</h3>
         <p>
-          Now that you’ve got some PEARL and we know you mean business, let's
+          Now that you’ve got some PEARL and we know you mean business, let’s
           briefly explore PEARL chests. If you’re not ready to lock up your
           PEARL, but you like the potential tax advantages of holding them while
           accruing rewards, no problem. You can simply hold and enjoy the gains.
@@ -180,7 +179,7 @@ const GetStartedView = () => {
           Think it over and decide what suits your risk management strategy
           before you lock up your PEARL. If all of this sounds great to you, but
           you’d like a little more information, go here to get better acquainted
-          with PEARL chests. If you've already thought about it, and you're
+          with PEARL chests. If you’ve already thought about it, and you’re
           ready to lock up your PEARLs, go here.
         </p>
         <Divider />
@@ -202,7 +201,7 @@ const GetStartedView = () => {
         </ImageContainer>
         <p>
           Now, we have (4,4) bonds that allow you to enjoy rewards from the time
-          you bond until it's time to claim your CLAM 5 days later. While
+          you bond until it’s time to claim your CLAM 5 days later. While
           bonding is a great way to get discounted CLAM at certain times,
           unstaking your previously purchased CLAM to bond is detrimental to the
           protocol, and ultimately detrimental to all Otters, so we recommend

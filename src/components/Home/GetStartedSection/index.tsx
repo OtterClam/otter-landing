@@ -56,10 +56,10 @@ const GetStartedSection = () => {
     <StyledContainer>
       <StyledH2>How to Get Started</StyledH2>
       <StyledContent>
-        So you've made it to OtterClam, you like what you see, and you're ready
-        to dive in. Now what? Well, you'll need to get some CLAM to participate
+        So you’ve made it to OtterClam, you like what you see, and you’re ready
+        to dive in. Now what? Well, you’ll need to get some CLAM to participate
         in the ecosystem. Although there are many ways for you to take advantage
-        of the platform's various features, you'll need our native currency CLAM
+        of the platform’s various features, you’ll need our native currency CLAM
         to get started.
       </StyledContent>
       <ColoredSection>
