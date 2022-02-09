@@ -72,7 +72,7 @@ const OttoStepBox = ({ metadata, number }: Props) => {
       {metadata.description.map((description, index) => {
         if (description.type === 'highlight')
           return (
-            <span className={classes.highlight}>
+            <span key={`desc-${index}`} className={classes.highlight}>
               {description.text}
               <br />
             </span>
