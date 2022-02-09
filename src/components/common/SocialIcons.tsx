@@ -17,37 +17,73 @@ export const SOCIAL_LINKS = {
 
 export const StyledDiscordIcon = styled(DiscordIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;
 export const StyledTwitterIcon = styled(TwitterIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;
 export const StyledGithubIcon = styled(GithubIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;
 export const StyledTelegramIcon = styled(TelegramIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;
 export const StyledDocIcon = styled(DocIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;
 export const StyledMediumIcon = styled(MediumIcon)<{
   $color?: string;
+  $width?: string;
+  $height?: string;
 }>`
+width: ${props => props.$width || '32px'};
+height: ${props => props.$height || '32px'};
+path {
   fill: ${(props) =>
     props.$color ? props.$color : props.theme.colors.common.otterBlue};
+}
 `;

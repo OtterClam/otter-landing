@@ -1,8 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/core'
-import TelegramIcon from 'public/icons/telegram.svg'
-import DiscordIcon from 'public/icons/discord.svg'
-import TwitterIcon from 'public/icons/twitter.svg'
+import { StyledTelegramIcon, StyledDiscordIcon, StyledTwitterIcon } from 'src/components/common/SocialIcons'
 import OttoHeroImage from './otto_hero.webp'
 import OttoHeroBackground from './background-banner.webp'
 
@@ -106,21 +104,21 @@ const OttoBanner = () => {
           <RoundedButton
             href="https://t.me/otterclam_official"
             type="outline"
-            icon={TelegramIcon}
+            Icon={<StyledTelegramIcon $color='#1D2654' $width='24px' $height='24px' />}
             text="Telegram"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
           <RoundedButton
             href="https://discord.gg/otterclam"
             type="outline"
-            icon={DiscordIcon}
+            Icon={<StyledDiscordIcon $color='#1D2654' $width='24px' $height='24px' />}
             text="Discord"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
           <RoundedButton
             href="https://twitter.com/otterclam"
             type="outline"
-            icon={TwitterIcon}
+            Icon={<StyledTwitterIcon $color='#1D2654' $width='24px' $height='24px' />}
             text="Twitter"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
