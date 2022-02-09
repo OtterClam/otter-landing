@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     padding: '10px 20px',
     marginTop: '15px',
+    textAlign: 'left',
   },
 }))
 
