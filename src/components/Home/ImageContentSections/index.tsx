@@ -27,6 +27,7 @@ color: ${props => props.theme.colors.common.white};
 const StyledH2 = styled.h2`
   font-size: 36px;
   line-height: 54px;
+  padding: 0px 20px;
   @media ${tabletMediaQuery} {
     font-size: 24px;
     line-height: 36px;
