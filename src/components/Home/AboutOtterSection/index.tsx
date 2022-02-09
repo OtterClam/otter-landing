@@ -26,7 +26,7 @@ const CenteredContent = styled.div`
 `;
 const ImageContainer = styled.div<{ $isTablet: boolean }>`
   position: relative;
-  padding-bottom: ${(props) => (props.$isTablet ? '223%' : '82%')};
+  padding-bottom: ${(props) => (props.$isTablet ? '198%' : '82%')};
   margin: ${props => props.theme.spacings.lg} 0;
   @media ${tabletMediaQuery} {
     margin: ${props => props.theme.spacings.md} 0;
