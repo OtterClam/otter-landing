@@ -29,6 +29,14 @@ const ParallaxBox = styled.div`
   z-index: 0;
 `;
 
+const FullMask = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+`;
+
 const WhiteMask = styled.div`
   position: absolute;
   height: 100vh;
@@ -171,6 +179,7 @@ const Banner = () => {
           />
         </>
       )}
+            <FullMask />
       <WhiteMask className="parallax" />
     </Container>
   );
