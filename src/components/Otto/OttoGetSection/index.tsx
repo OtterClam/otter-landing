@@ -7,6 +7,8 @@ import { DescriptionMetadata } from './type'
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    display: 'flex',
+    flexDirection: 'column',
     backgroundColor: theme.palette.mode.lightGray200,
     textAlign: 'center',
   },
