@@ -8,10 +8,10 @@ import { tabletMediaQuery } from "src/themes/mediaQuery";
 
 const Container = styled.div`
   .image-content {
-    &:nth-child(even) {
+    &:nth-child(odd) {
       background-color: ${(props) => props.theme.colors.common.white};
     }
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: ${(props) => props.theme.colors.light.lightGray100};
     }
   }
