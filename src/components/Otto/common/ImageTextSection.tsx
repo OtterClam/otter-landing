@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   h4: {
     fontSize: '48px',
     fontWeight: 800,
+    lineHeight: '72px',
     textAlign: 'center',
     margin: 0,
     [theme.breakpoints.down('md')]: {
