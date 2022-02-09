@@ -16,7 +16,7 @@ export default function OttoHeader() {
       { text: t('otto.header.bank'), href: 'https://app.otterclam.finance/#/dashboard', new: false },
       { text: t('otto.header.otto'), href: '/otto', new: true },
       { text: t('otto.header.airdrop'), href: 'https://www.otterclam.finance/#/nft', new: false },
-      { text: 'Get Started', href: '/get-started?view=buy-clams', new: true },
+      { text: 'Get Started', href: '/get-started', new: true },
     ],
     []
   )
