@@ -55,14 +55,14 @@ const GetStartedView = () => {
   return (
     <StyledContainer>
       <Title>
-        <CustomH1>Get Started</CustomH1>
-        <h3>Stake, Chill, and Profit</h3>
+        <CustomH1>Getting Started</CustomH1>
+        <h3>Stake, Chill, and Harvest</h3>
       </Title>
       <ContentCard>
         <p>
-          So you’ve made it to OtterClam, you like what you see, and you're
+          So you’ve made it to OtterClam, you like what you see, and you’re
           ready to dive in. Now what? Well, you’ll need to get some CLAM, the
-          native currency of the entire Otter Kingdom ecosystem. Here's how:
+          native currency of the entire Otter Kingdom ecosystem. Here’s how:
         </p>
         <Divider />
         <h3>Buy CLAMs</h3>
@@ -98,7 +98,15 @@ const GetStartedView = () => {
         <p>
           Once you’ve acquired the amount of CLAM you want (make sure you didn’t
           use *all* of your MATIC, you’ll need some for gas), you can simply
-          stake your CLAM to start earning rewards. Go here to stake.{' '}
+          stake your CLAM to start earning rewards. Go{' '}
+          <a
+            href="https://app.otterclam.finance/#/stake"
+            target="_blank"
+            rel="noreferrer"
+          >
+            here
+          </a>{' '}
+          to stake.{' '}
         </p>
         <ImageContainer>
           <Image
@@ -178,9 +186,21 @@ const GetStartedView = () => {
           <br />
           Think it over and decide what suits your risk management strategy
           before you lock up your PEARL. If all of this sounds great to you, but
-          you’d like a little more information, go here to get better acquainted
-          with PEARL chests. If you’ve already thought about it, and you’re
-          ready to lock up your PEARLs, go here.
+          you’d like a little more information, go{' '}
+          <a
+            href="https://otterclam.medium.com/introducing-pearl-chests-and-pearl-notes-70a61748963f"
+            target="_blank"
+            rel="noreferrer"
+          >
+            here
+          </a>{' '}
+          to get better acquainted with PEARL chests. If you’ve already thought
+          about it, and you’re ready to lock up your PEARLs, go{' '}
+          <a
+            href="https://app.otterclam.finance/#/pearl-chests?tab=lockup"
+            target="_blank"
+            rel="noreferrer"
+          >here</a>.
         </p>
         <Divider />
         <h3>Bond</h3>
@@ -206,7 +226,12 @@ const GetStartedView = () => {
           unstaking your previously purchased CLAM to bond is detrimental to the
           protocol, and ultimately detrimental to all Otters, so we recommend
           bonding with assets upon arrival to the kingdom. To learn more about
-          bonding and the bonding pairs we currently offer, go here.
+          bonding and the bonding pairs we currently offer, go{' '}
+          <a
+            href="https://otterclam.medium.com/level-up-otters-4-4-is-here-72e11cf56270"
+            target="_blank"
+            rel="noreferrer"
+          >here</a>.
         </p>
       </ContentCard>
     </StyledContainer>
