@@ -86,6 +86,8 @@ const StyledH3 = styled.h3`
   margin-bottom: ${(props) => props.theme.spacings.md};
 `;
 const StyledArrow = styled(IconArrow)`
+  position: absolute;
+  left: 50%;
   animation: infinite-down 1s linear infinite both;
   @keyframes infinite-down {
     0% {
