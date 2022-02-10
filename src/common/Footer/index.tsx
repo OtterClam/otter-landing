@@ -7,19 +7,26 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    position: 'relative'
+  },
   deco: {
     width: '618px',
     height: '240px',
-    position: 'relative',
+    position: 'absolute',
+    top: '-144px',
+    left: '50%',
+    transform: 'translateX(-50%)',
     margin: '0 auto -96px auto',
     zIndex: 1,
     [theme.breakpoints.down('md')]: {
+      top: '-88px',
       width: '375px',
       height: '145px',
       margin: '0 auto -56px auto',
     },
   },
-  container: {
+  content: {
     position: 'relative',
     backgroundColor: theme.palette.mode.lightGray200,
     display: 'grid',
@@ -108,13 +115,13 @@ const Footer = () => {
   const { pathname } = useRouter()
   const showDeco = pathname !== '/otto'
   return (
-    <>
+    <div className={`${classes.container} ${showDeco && classes.decoMargin}`}>
       {showDeco && (
         <div className={classes.deco}>
           <Image layout="fill" src={FooterDeco.src} alt="footer deco" />
         </div>
       )}
-      <div className={`${classes.container}`}>
+      <div className={`${classes.content}`}>
         <div className={classes.column}>
           <h5 className={classes.h5}>IN PARTNERSHIP WITH</h5>
           <div className={`${classes.column} ${classes.partnership}`}>
@@ -161,7 +168,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default Footer

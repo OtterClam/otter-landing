@@ -12,9 +12,14 @@ import {
 } from 'src/components/common/SocialIcons';
 
 const Container = styled.div`
-  margin-bottom: -120px;
+  position: relative;
+  background-color: ${(props) => props.theme.colors.common.white};
+  padding-bottom: 30px;
+  @media (max-width: 1280px) {
+    padding-bottom: 0;
+  }
   @media ${tabletMediaQuery} {
-    margin-bottom: -60px;
+    padding-bottom: 30px;
   }
 `;
 
