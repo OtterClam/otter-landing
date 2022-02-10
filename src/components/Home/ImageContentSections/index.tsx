@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import ImageContentSection from 'src/components/common/ImageContentSection'
 import ImageBank from './images/image-bank.webp'
-import ImageMarket from './images/image-market.png'
+import ImageMarket from './images/image-market.webp'
 import ImageOtto from 'src/components/Otto/OttoBanner/otto_hero.webp'
 import ImageSandbox from './images/image-sandbox.webp'
 import { tabletMediaQuery } from 'src/themes/mediaQuery'
