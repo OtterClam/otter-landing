@@ -51,6 +51,7 @@ const AboutOtterSection = () => {
           objectFit={isTablet ? 'cover' : 'contain'}
           alt="about otter kingdom"
           placeholder="blur"
+          priority
         />
       </ImageContainer>
       <CenteredContent>

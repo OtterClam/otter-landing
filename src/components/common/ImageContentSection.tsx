@@ -43,6 +43,7 @@ const ImageSection = ({ sizing, imageRatio, image, alt }: ImageProps) => {
         width={sizing === 'full' ? undefined : image.width}
         objectFit={sizing === 'full' ? 'cover' : 'contain'}
         placeholder="blur"
+        priority
       />
     </_Container>
   )
