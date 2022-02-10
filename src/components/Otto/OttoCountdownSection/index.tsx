@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 0,
     [theme.breakpoints.down('md')]: {
       padding: '80px 20px 80px 20px',
-    }
+    },
   },
   decoLeft: {
     position: 'absolute',
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     [theme.breakpoints.down('md')]: {
       width: '40%',
-    }
+    },
   },
   decoRight: {
     position: 'absolute',
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     [theme.breakpoints.down('md')]: {
       width: '40%',
-    }
+    },
   },
   title: {
     color: theme.palette.mode.white,
@@ -50,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     color: theme.palette.otter.white,
-    fontSize: '28px'
-  }
+    fontSize: '28px',
+  },
 }))
 
 const OttoCountdownSection = () => {
@@ -60,7 +60,7 @@ const OttoCountdownSection = () => {
   return (
     <div className={classes.container}>
       <div className={classes.decoLeft}>
-        <Image src={OttoDecoLeftImage} alt="countdown left" />
+        <Image src={OttoDecoLeftImage} alt="countdown left" placeholder="blur" />
       </div>
       <h4 className={classes.title}>{t('otto.countdown.mintTitle')}</h4>
       <p className={classes.content}>COMING SOON</p>
@@ -74,7 +74,7 @@ const OttoCountdownSection = () => {
       {/* TODO|OTTO: add time up callback */}
       <OttoBuyClamHint />
       <div className={classes.decoRight}>
-        <Image src={OttoDecoRightImage} alt="countdown right" />
+        <Image src={OttoDecoRightImage} alt="countdown right" placeholder="blur" />
       </div>
     </div>
   )

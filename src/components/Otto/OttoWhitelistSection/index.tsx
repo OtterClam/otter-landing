@@ -1,17 +1,17 @@
-import { useTranslation } from 'react-i18next';
-import { makeStyles, useMediaQuery } from '@material-ui/core';
-import RoundedButton from '../../common/RoundedButton';
-import WhiteListRightBg from './background-otto_whitelist_right.png';
-import WhiteListLeftBg from './background-otto_whitelist_left.png';
-import WhiteListTopBg from './background-otto_whitelist_top.png';
-import Image from 'next/image';
+import { useTranslation } from 'react-i18next'
+import { makeStyles, useMediaQuery } from '@material-ui/core'
+import RoundedButton from '../../common/RoundedButton'
+import WhiteListRightBg from './background-otto_whitelist_right.png'
+import WhiteListLeftBg from './background-otto_whitelist_left.png'
+import WhiteListTopBg from './background-otto_whitelist_top.png'
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     justifyContent: 'space-between',
     [theme.breakpoints.down('md')]: {
-      flexDirection: 'column'
+      flexDirection: 'column',
     },
   },
   content: {
@@ -25,17 +25,17 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     padding: '120px',
     [theme.breakpoints.down('md')]: {
-      padding: '10px 40px 40px 40px'
+      padding: '10px 40px 40px 40px',
     },
   },
   image: {
     position: 'relative',
-    width: '30%'
+    width: '30%',
   },
   tabletImage: {
     position: 'relative',
     width: '100%',
-    paddingBottom: '60%'
+    paddingBottom: '60%',
   },
   body2: {
     fontSize: '20px',
@@ -66,38 +66,26 @@ const useStyles = makeStyles((theme) => ({
   highlight: {
     color: theme.palette.mode.highlight,
   },
-}));
+}))
 
-const customTabletMediaQuery = '(max-width: 1300px)';
+const customTabletMediaQuery = '(max-width: 1300px)'
 const OttoWhitelistSection = () => {
-  const classes = useStyles();
-  const isTablet = useMediaQuery(customTabletMediaQuery);
-  const { t } = useTranslation();
+  const classes = useStyles()
+  const isTablet = useMediaQuery(customTabletMediaQuery)
+  const { t } = useTranslation()
   return (
     <div className={classes.container}>
       {!isTablet && (
         <div className={classes.image}>
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={WhiteListLeftBg}
-            alt="whitelist"
-          />
+          <Image layout="fill" objectFit="cover" src={WhiteListLeftBg} alt="whitelist" placeholder="blur" />
         </div>
       )}
       {isTablet && (
         <div className={classes.tabletImage}>
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={WhiteListTopBg}
-            alt="whitelist"
-          />
+          <Image layout="fill" objectFit="cover" src={WhiteListTopBg} alt="whitelist" placeholder="blur" />
         </div>
       )}
-      <div
-        className={`${classes.content} ${classes.content}`}
-      >
+      <div className={`${classes.content} ${classes.content}`}>
         <p className={classes.body2}>{t('otto.whitelist.amount')}</p>
         <h3 className={classes.h3}>5,000 Ottos</h3>
         <p className={classes.body1}>
@@ -105,23 +93,14 @@ const OttoWhitelistSection = () => {
           <br />
           {t('otto.whitelist.joinDescription2')}
         </p>
-        <RoundedButton
-          href="https://discord.gg/otterclam"
-          type="solid"
-          text={t('otto.whitelist.joinButton')}
-        />
+        <RoundedButton href="https://discord.gg/otterclam" type="solid" text={t('otto.whitelist.joinButton')} />
       </div>
       {!isTablet && (
         <div className={classes.image}>
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={WhiteListRightBg}
-            alt="whitelist"
-          />
+          <Image layout="fill" objectFit="cover" src={WhiteListRightBg} alt="whitelist" placeholder="blur" />
         </div>
       )}
     </div>
-  );
-};
-export default OttoWhitelistSection;
+  )
+}
+export default OttoWhitelistSection

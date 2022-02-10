@@ -1,10 +1,10 @@
-import { Link, makeStyles } from '@material-ui/core';
-import { RESOURCES_LINKS, INVOLVED_LINKS } from './constant';
-import PartnershipLightModeImage from 'public/logo-partnership-light.png';
-import SlowmistLightModeImage from 'public/logo-slowmist-light.png';
-import FooterDeco from './images/deco-footer.webp';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { Link, makeStyles } from '@material-ui/core'
+import { RESOURCES_LINKS, INVOLVED_LINKS } from './constant'
+import PartnershipLightModeImage from 'public/logo-partnership-light.png'
+import SlowmistLightModeImage from 'public/logo-slowmist-light.png'
+import FooterDeco from './images/deco-footer.webp'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
   deco: {
@@ -101,12 +101,12 @@ const useStyles = makeStyles((theme) => ({
     height: '16px',
     marginLeft: '4px',
   },
-}));
+}))
 
 const Footer = () => {
-  const classes = useStyles();
-  const { pathname } = useRouter();
-  const showDeco = pathname !== '/otto';
+  const classes = useStyles()
+  const { pathname } = useRouter()
+  const showDeco = pathname !== '/otto'
   return (
     <>
       {showDeco && (
@@ -125,23 +125,16 @@ const Footer = () => {
                 height={62}
                 alt="partnership"
                 layout="fixed"
+                placeholder="blur"
               />
             </div>
 
             <div className={classes.partnershipText}>
-              <p className={classes.body2}>
-                © 2022 OtterClam All Rights Reserved
-              </p>
+              <p className={classes.body2}>© 2022 OtterClam All Rights Reserved</p>
               <p className={`${classes.body2} ${classes.auditText}`}>
                 Audited by
                 <div className={classes.slowmist}>
-                  <Image
-                    src={SlowmistLightModeImage}
-                    width={80}
-                    height={18}
-                    alt="slowmist"
-                    layout="fixed"
-                  />
+                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" />
                 </div>
               </p>
             </div>
@@ -151,12 +144,7 @@ const Footer = () => {
           <h5 className={classes.h5}>RESOURCES</h5>
           <div className={classes.links}>
             {RESOURCES_LINKS.map((link, index) => (
-              <Link
-                key={`resource-${index}`}
-                className={classes.link}
-                href={link.href}
-                target="__blank"
-              >
+              <Link key={`resource-${index}`} className={classes.link} href={link.href} target="__blank">
                 {link.text}
               </Link>
             ))}
@@ -166,12 +154,7 @@ const Footer = () => {
           <h5 className={classes.h5}>GET INVOLVED</h5>
           <div className={classes.links}>
             {INVOLVED_LINKS.map((link, index) => (
-              <Link
-                key={`involved-${index}`}
-                className={classes.link}
-                href={link.href}
-                target="__blank"
-              >
+              <Link key={`involved-${index}`} className={classes.link} href={link.href} target="__blank">
                 {link.text}
               </Link>
             ))}
@@ -179,6 +162,6 @@ const Footer = () => {
         </div>
       </div>
     </>
-  );
-};
-export default Footer;
+  )
+}
+export default Footer

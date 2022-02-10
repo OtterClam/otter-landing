@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16px',
     lineHeight: '24px',
     fontWeight: 700,
-    whiteSpace: 'pre-line'
+    whiteSpace: 'pre-line',
   },
   button: {
     marginTop: '20px',
@@ -49,11 +49,23 @@ const StepImage = ({ number }: { number: number }) => {
   const classes = useStyles()
   switch (number) {
     case 1:
-      return <div className={classes.image}><Image src={ImageStep1} alt="step1" /></div>
+      return (
+        <div className={classes.image}>
+          <Image src={ImageStep1} alt="step1" placeholder="blur" />
+        </div>
+      )
     case 2:
-      return <div className={classes.image}><Image src={ImageStep2} alt="step2" /></div>
+      return (
+        <div className={classes.image}>
+          <Image src={ImageStep2} alt="step2" placeholder="blur" />
+        </div>
+      )
     case 3:
-      return <div className={classes.image}><Image src={ImageStep3} alt="step3" /></div>
+      return (
+        <div className={classes.image}>
+          <Image src={ImageStep3} alt="step3" placeholder="blur" />
+        </div>
+      )
     default:
       return <></>
   }
