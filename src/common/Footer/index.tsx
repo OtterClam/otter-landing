@@ -115,7 +115,7 @@ const Footer = () => {
   const { pathname } = useRouter()
   const showDeco = pathname !== '/otto'
   return (
-    <div className={`${classes.container} ${showDeco && classes.decoMargin}`}>
+    <div className={classes.container}>
       {showDeco && (
         <div className={classes.deco}>
           <Image layout="fill" src={FooterDeco.src} alt="footer deco" />
