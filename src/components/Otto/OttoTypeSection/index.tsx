@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       gridTemplateColumns: 'auto',
     },
-  }
+  },
 }))
 
 const OttoTypeSection = () => {
@@ -83,7 +83,7 @@ const OttoTypeSection = () => {
         total: null,
       },
     ],
-    []
+    [t]
   )
   return (
     <div className={`${classes.container} container`}>

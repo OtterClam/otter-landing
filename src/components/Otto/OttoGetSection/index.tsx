@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     marginBottom: '60px',
     [theme.breakpoints.down('md')]: {
-      marginBottom: '20px'
+      marginBottom: '20px',
     },
   },
   boxes: {
@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       gridTemplateColumns: 'auto',
       gridColumnGap: '0px',
-      gridRowGap: '40px'
+      gridRowGap: '40px',
     },
-  }
+  },
 }))
 
 const OttoGetSection = () => {
@@ -65,14 +65,12 @@ const OttoGetSection = () => {
         button: { text: t('otto.get.calendarButton'), href: 'https://calendar.google.com/calendar/u/0/r?tab=rc' },
       },
     ],
-    []
+    [t]
   )
 
   return (
     <div className={`${classes.container} container`}>
-      <h4 className={classes.title}>
-        How to get Ottos?
-      </h4>
+      <h4 className={classes.title}>How to get Ottos?</h4>
       <div className={classes.boxes}>
         {OTTO_STEP_METADATA.map((metadata, index) => (
           <OttoStepBox key={`step-${index}`} metadata={metadata} number={index + 1} />

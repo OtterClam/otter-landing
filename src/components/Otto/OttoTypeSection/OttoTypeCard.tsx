@@ -83,7 +83,11 @@ const OttoImage = ({ className, type }: ImageProps) => {
         return OttoVXImage
     }
   })()
-  return <div className={className}><Image src={imgSrc} alt={type} /></div>
+  return (
+    <div className={className}>
+      <Image src={imgSrc} alt={type} />
+    </div>
+  )
 }
 
 interface Props {
@@ -101,7 +105,7 @@ const OttoTypeCard = ({ metadata }: Props) => {
       </div>
       <div className={`${classes.countBox} ${classes.countBox}`}>
         <p className={classes.body2}>{t('otto.type.population')}</p>
-        <p className={classes.body1}>{metadata.total === null ? t('otto.type.comingSoon') : `0 / ${metadata.total}`}</p>
+        <p className={classes.body1}>{metadata.total === null ? t('otto.type.comingSoon') : `${metadata.total}`}</p>
       </div>
     </div>
   )

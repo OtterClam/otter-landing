@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       gridTemplateColumns: 'auto',
       gridColumnGap: '0px',
-    }
+    },
   },
   h4: {
     fontSize: '48px',
@@ -55,14 +55,12 @@ const OtterUsageSection = () => {
         content: t('otto.usage.beneficialContent'),
       },
     ],
-    []
+    [t]
   )
 
   return (
     <div className={`container ${classes.container}`}>
-      <h4 className={classes.h4}>
-        {t('otto.usage.title')}
-      </h4>
+      <h4 className={classes.h4}>{t('otto.usage.title')}</h4>
       <div className={classes.cards}>
         {OTTO_USAGE_METADATA.map((metadata) => (
           <OttoUsageCard key={metadata.type} metadata={metadata} />
