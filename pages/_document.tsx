@@ -8,8 +8,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
           {/* PWA primary color */}
           <meta name="theme-color" content={light.palette.primary.main} />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+          <link rel="shortcut icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+          <link rel="icon" href="favicon/favicon.ico" />
+          <link rel="apple-touch-icon" href="/logo192.png" />
         </Head>
         <body>
           <Main />
