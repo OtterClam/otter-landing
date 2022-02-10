@@ -26,7 +26,7 @@ const StyledContent = styled.h3<{ $theme: Theme }>`
 `;
 const GridBox = styled.div <{$count: number}>`
   display: grid;
-  grid-template-columns: repeat(${props => props.$count}, 1fr);
+  grid-template-columns: repeat(${(props) => props.$count}, minmax(0, 1fr));
   grid-column-gap: 30px;
   margin-bottom: ${(props) => props.theme.spacings.lg};
   @media ${laptopMediaQuery} {
