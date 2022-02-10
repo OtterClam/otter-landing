@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const OttoView = () => {
+const OttoPage = () => {
   const classes = useStyles()
   return (
     <div className={classes.view}>
@@ -29,7 +29,7 @@ const OttoView = () => {
           content="Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Some appear normal. Some look crazy. Some are just damn cool!"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/otto-og.jpg" />
+        <meta property="og:image" content={process.env.NEXT_PUBLIC_URL + '/otto-og.jpg'} />
       </Head>
       <OttoBanner />
       <OttoWhitelistSection />
@@ -43,4 +43,4 @@ const OttoView = () => {
     </div>
   )
 }
-export default OttoView
+export default OttoPage

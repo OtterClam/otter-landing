@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           content="We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image" content={process.env.NEXT_PUBLIC_URL + '/og.jpg'} />
       </Head>
 
       <main>
