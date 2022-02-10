@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import ImageContentSection from 'src/components/common/ImageContentSection';
-import ImageBank from './images/image-bank.webp';
-import ImageMarket from './images/image-market.webp';
-import ImageOtto from 'src/components/Otto/OttoBanner/otto_hero.webp';
-import ImageSandbox from './images/image-sandbox.webp';
-import { tabletMediaQuery } from "src/themes/mediaQuery";
+import styled from 'styled-components'
+import ImageContentSection from 'src/components/common/ImageContentSection'
+import ImageBank from './images/image-bank.webp'
+import ImageMarket from './images/image-market.png'
+import ImageOtto from 'src/components/Otto/OttoBanner/otto_hero.webp'
+import ImageSandbox from './images/image-sandbox.webp'
+import { tabletMediaQuery } from 'src/themes/mediaQuery'
 
 const Container = styled.div`
   .image-content {
@@ -15,14 +15,14 @@ const Container = styled.div`
       background-color: ${(props) => props.theme.colors.light.lightGray100};
     }
   }
-`;
+`
 const IntroTextSection = styled(Container)`
-color: ${props => props.theme.colors.common.white};
-  background-color: ${props => props.theme.colors.common.otterDark};
+  color: ${(props) => props.theme.colors.common.white};
+  background-color: ${(props) => props.theme.colors.common.otterDark};
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
-`;
+`
 
 const StyledH2 = styled.h2`
   font-size: 36px;
@@ -32,13 +32,13 @@ const StyledH2 = styled.h2`
     font-size: 24px;
     line-height: 36px;
   }
-`;
+`
 
 const ImageContentSections = () => {
   return (
     <Container>
       <IntroTextSection>
-      <StyledH2>Here we introduce our core features that you can explore...</StyledH2>
+        <StyledH2>Here we introduce our core features that you can explore...</StyledH2>
       </IntroTextSection>
       <ImageContentSection
         layout="image-right"
@@ -110,6 +110,6 @@ const ImageContentSections = () => {
         }}
       />
     </Container>
-  );
-};
-export default ImageContentSections;
+  )
+}
+export default ImageContentSections
