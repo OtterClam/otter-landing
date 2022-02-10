@@ -30,11 +30,12 @@ const GridBox = styled.div <{$count: number}>`
   grid-column-gap: 30px;
   margin-bottom: ${(props) => props.theme.spacings.lg};
   @media ${laptopMediaQuery} {
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 15px;
+    grid-row-gap: 15px;
   }
   @media ${tabletMediaQuery} {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px;
   }
 `;
 
