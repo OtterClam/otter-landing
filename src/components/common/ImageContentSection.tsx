@@ -94,7 +94,7 @@ const ContentSection = ({ hasDeco = false, textProps, buttonProps }: ContentProp
       <ContentContainer>
         {hasDeco && (
           <DecoContainer>
-            <Image src={ImageBankDeco.src} height={32} width={116} layout="fixed" objectFit="contain" alt="deco" />
+            <Image src={ImageBankDeco} height={32} width={116} layout="fixed" objectFit="contain" alt="deco" priority />
           </DecoContainer>
         )}
         <StyledH2>{textProps.title}</StyledH2>

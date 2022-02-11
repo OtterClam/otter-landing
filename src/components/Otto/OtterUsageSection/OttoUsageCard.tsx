@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '40px',
     [theme.breakpoints.down('md')]: {
       padding: '20px',
-    }
+    },
   },
   title: {
     color: theme.palette.mode.otterDark,
@@ -28,14 +28,14 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '15px',
   },
   image: {
-    width: '100%'
+    width: '100%',
   },
   content: {
     fontWeight: 400,
     textAlign: 'center',
     lineHeight: '22px',
     marginBottom: '15px',
-  }
+  },
 }))
 
 interface ImageProps {
@@ -53,7 +53,7 @@ const UsageImage = ({ className, type }: ImageProps) => {
         return BeneficialEcosystemImage
     }
   })()
-  return <Image className={className} src={imgSrc} alt="type" />
+  return <Image className={className} src={imgSrc} alt="type" priority />
 }
 
 interface Props {

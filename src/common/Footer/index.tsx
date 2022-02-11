@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    position: 'relative'
+    position: 'relative',
   },
   deco: {
     width: '618px',
@@ -118,7 +118,7 @@ const Footer = () => {
     <div className={classes.container}>
       {showDeco && (
         <div className={classes.deco}>
-          <Image layout="fill" src={FooterDeco.src} alt="footer deco" />
+          <Image layout="fill" src={FooterDeco} alt="footer deco" priority />
         </div>
       )}
       <div className={`${classes.content}`}>
@@ -133,6 +133,7 @@ const Footer = () => {
                 alt="partnership"
                 layout="fixed"
                 placeholder="blur"
+                priority
               />
             </div>
 
@@ -141,7 +142,7 @@ const Footer = () => {
               <p className={`${classes.body2} ${classes.auditText}`}>
                 Audited by
                 <div className={classes.slowmist}>
-                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" />
+                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" priority />
                 </div>
               </p>
             </div>

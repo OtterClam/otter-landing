@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '60px',
       paddingBottom: '40px',
       textAlign: 'center',
-    }
+    },
   },
   sectionLeft: {
     flex: 1,
@@ -33,12 +33,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       paddingLeft: '30px',
       paddingRight: '30px',
-    }
+    },
   },
   sectionRight: {
     flex: 1,
     display: 'flex',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   title: {
     fontSize: '60px',
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       fontSize: '48px',
       lineHeight: '72px',
-    }
+    },
   },
   slogan: {
     fontSize: '24px',
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '20px',
       lineHeight: '30px',
       marginBottom: '20px',
-    }
+    },
   },
   description: {
     fontSize: '20px',
@@ -71,18 +71,18 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       fontSize: '18px',
       lineHeight: '28px',
-    }
+    },
   },
   buttons: {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '20px',
     [theme.breakpoints.down('md')]: {
-      justifyContent: 'center'
-    }
+      justifyContent: 'center',
+    },
   },
   image: {
-    width: '100%'
+    width: '100%',
   },
   highlight: {
     color: theme.palette.otter.clamPink,
@@ -104,28 +104,28 @@ const OttoBanner = () => {
           <RoundedButton
             href="https://t.me/otterclam_official"
             type="outline"
-            Icon={<StyledTelegramIcon $color='#1D2654' $width='24px' $height='24px' />}
+            Icon={<StyledTelegramIcon $color="#1D2654" $width="24px" $height="24px" />}
             text="Telegram"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
           <RoundedButton
             href="https://discord.gg/otterclam"
             type="outline"
-            Icon={<StyledDiscordIcon $color='#1D2654' $width='24px' $height='24px' />}
+            Icon={<StyledDiscordIcon $color="#1D2654" $width="24px" $height="24px" />}
             text="Discord"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
           <RoundedButton
             href="https://twitter.com/otterclam"
             type="outline"
-            Icon={<StyledTwitterIcon $color='#1D2654' $width='24px' $height='24px' />}
+            Icon={<StyledTwitterIcon $color="#1D2654" $width="24px" $height="24px" />}
             text="Twitter"
             iconSvgProps={{ viewBox: '0 0 32 32' }}
           />
         </div>
       </div>
       <div className={classes.sectionRight}>
-        <Image className={classes.image} src={OttoHeroImage} alt="banner" />
+        <Image className={classes.image} src={OttoHeroImage} alt="banner" priority />
       </div>
     </div>
   )
