@@ -8,7 +8,6 @@ body {
   margin: 0;
   font-family: 'Gilroy';
   font-weight: 700;
-  background: white !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

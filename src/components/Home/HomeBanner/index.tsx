@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import { Power0 } from 'gsap';
 import { gsap } from 'src/utils/gsap';
 import { useMediaQuery } from '@material-ui/core';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
@@ -21,12 +20,10 @@ const Container = styled.div`
 `;
 
 const ParallaxBox = styled.div`
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0;
-  transition: 0.5s;
-  z-index: 0;
 `;
 
 const FullMask = styled.div`
@@ -35,32 +32,6 @@ const FullMask = styled.div`
   width: 100vw;
   top: 0;
   background-color: rgba(0, 0, 0, 0.1);
-`;
-
-const WhiteMask = styled.div`
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  transition: 0.5s;
-  top: 0;
-  z-index: 0;
-
-  &::after {
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    display: block;
-    content: '';
-    height: 16vh;
-    width: 100%;
-    background-color: white;
-  }
-  @media ${tabletMediaQuery} {
-    &::after {
-      top: 105vh;
-      height: 11vh;
-    }
-  }
 `;
 
 const Content = styled.div`
@@ -86,6 +57,8 @@ const StyledH3 = styled.h3`
   margin-bottom: ${(props) => props.theme.spacings.md};
 `;
 const StyledArrow = styled(IconArrow)`
+  position: absolute;
+  left: 50%;
   animation: infinite-down 1s linear infinite both;
   @keyframes infinite-down {
     0% {
@@ -110,8 +83,8 @@ const Banner = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#trigger',
-        start: 'top',
-        end: 'center',
+        start: "top top",
+        end: "bottom top",
         scrub: true,
       },
     });
@@ -120,14 +93,10 @@ const Banner = () => {
       .toArray<HTMLDivElement>('.parallax')
       .forEach((layer: HTMLDivElement, index: number) => {
         const movement = -(layerHeight * LAYER_DEPTHs[index]);
-        tl.to(layer, { y: movement, ease: 'none' }, 0).to('.arrow', {
-          delay: 0.01,
-          repeat: 4,
-          yoyo: true,
-          ease: Power0.easeOut,
-          duration: 0.1,
-        });
+        tl
+          .to(layer, { y: movement, ease: 'none' }, 0)
       });
+    console.log('called!')
   }, []);
   return (
     <Container id="trigger">
@@ -181,7 +150,6 @@ const Banner = () => {
         </>
       )}
             <FullMask />
-      <WhiteMask className="parallax" />
     </Container>
   );
 };

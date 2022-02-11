@@ -7,6 +7,7 @@ import ImageSandbox from './images/image-sandbox.webp'
 import { tabletMediaQuery } from 'src/themes/mediaQuery'
 
 const Container = styled.div`
+  position: relative;
   .image-content {
     &:nth-child(odd) {
       background-color: ${(props) => props.theme.colors.common.white};
