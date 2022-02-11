@@ -78,7 +78,9 @@ const GetStartedSection = () => {
           />
         </ImageBox>
         <div>
-          <StyledP>If you’re not sure how to buy CLAM, click the button below and Otter Guide will lead you:</StyledP>
+          <StyledP>
+            If you’re not sure how to buy CLAM, click the button below and our Otter Guide will lead you:
+          </StyledP>
           <RoundedButton text="Getting Started" href="/get-started" target="_self" />
         </div>
       </ColoredSection>
