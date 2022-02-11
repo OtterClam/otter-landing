@@ -170,6 +170,9 @@ const English = {
         beneficialTitle: 'Kingdom-wide Benefits',
         beneficialContent: 'Owners can use Ottos anywhere in the kingdom to reap benefits.',
       },
+      roadMap: {
+        title: 'Otto Roadmap'
+      },
       countdown: {
         mintTitle: 'Mint your Ottos!',
         mintSubtitle: 'Mint Countdown',
