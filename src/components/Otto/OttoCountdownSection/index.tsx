@@ -43,10 +43,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: theme.palette.mode.white,
     fontSize: '48px',
+    lineHeight: '72px',
     fontWeight: 800,
     textAlign: 'center',
     margin: 0,
     marginBottom: '20px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '36px',
+      lineHeight: '54px',
+    },
   },
   content: {
     color: theme.palette.otter.white,

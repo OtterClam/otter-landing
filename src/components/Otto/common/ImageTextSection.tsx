@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     [theme.breakpoints.down('md')]: {
       fontSize: '36px',
+      lineHeight: '54px',
     },
   },
   h5: {
