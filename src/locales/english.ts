@@ -85,7 +85,7 @@ const English = {
     },
     otto: {
       header: {
-        bank: 'Bank',
+        bank: 'Treasury',
         otto: 'Otto',
         airdrop: 'Airdrop',
       },
