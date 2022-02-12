@@ -7,6 +7,7 @@ import OttoComponentSection from 'src/components/Otto/OttoComponentSection'
 import OttoFactorySection from 'src/components/Otto/OttoFactorySection'
 import OtterRiverSection from 'src/components/Otto/OttoRiverSection'
 import OttoUsageSection from 'src/components/Otto/OtterUsageSection'
+import OttoRoadMapSection from 'src/components/Otto/OtterRoadmapSection';
 import OttoCountdownSection from 'src/components/Otto/OttoCountdownSection'
 import Head from 'next/head'
 
@@ -39,6 +40,7 @@ const OttoPage = () => {
       <OttoFactorySection />
       <OtterRiverSection />
       <OttoUsageSection />
+      <OttoRoadMapSection />
       <OttoCountdownSection />
     </div>
   )

@@ -39,29 +39,37 @@ const useStyles = makeStyles((theme) => ({
   },
   body2: {
     fontSize: '20px',
+    lineHeight: '30px',
     fontWeight: 700,
-    marginBottom: '25px',
-  },
-  h2: {
-    fontSize: '100px',
-    fontWeight: 800,
-    lineHeight: '90px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '18px',
+      lineHeight: '28px',
+    },
   },
   h3: {
-    fontSize: '64px',
+    fontSize: '60px',
+    lineHeight: '90px',
     fontWeight: 800,
-    marginBottom: '20px',
   },
   h5: {
     fontSize: '36px',
     fontWeight: 800,
     marginBottom: '20px',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '20px',
+      lineHeight: '54px',
+    },
   },
   body1: {
     fontSize: '24px',
     fontWeight: 700,
     lineHeight: '36px',
     marginBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '20px',
+      lineHeight: '30px',
+      marginBottom: '20px',
+    },
   },
   highlight: {
     color: theme.palette.mode.highlight,

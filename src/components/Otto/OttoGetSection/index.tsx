@@ -14,9 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '48px',
+    lineHeight: '72px',
     fontWeight: 800,
-    marginBottom: '60px',
+    marginBottom: '40px',
     [theme.breakpoints.down('md')]: {
+      fontSize: '36px',
+      lineHeight: '54px',
       marginBottom: '20px',
     },
   },

@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     }
   },
+  image: {
+    marginBottom: '10px'
+  },
   content: {
     color: theme.palette.mode.white,
     fontSize: '16px',
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   highlight: {
-    color: theme.palette.otter.clamPink,
+    color: `${theme.palette.otter.clamPink} !important`,
     fontSize: '16px',
     fontWeight: 700,
     lineHeight: '24px',
@@ -50,7 +53,7 @@ const OttoBuyClamHint = () => {
   const { t } = useTranslation()
   return (
     <div className={classes.container}>
-      <div>
+      <div className={classes.image}>
         <SvgIcon component={CLAM} viewBox="0 0 32 32" style={{ height: 60, width: 60 }} />
       </div>
       <div className={classes.content}>{t('otto.countdown.hintDescription')}</div>

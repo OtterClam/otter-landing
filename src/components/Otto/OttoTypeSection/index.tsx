@@ -28,9 +28,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: '48px',
     fontWeight: 800,
+    lineHeight: '72px',
     textAlign: 'center',
     color: theme.palette.otter.white,
-    marginBottom: '60px',
+    marginBottom: '40px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '36px',
+      lineHeight: '54px',
+      marginBottom: '20px',
+    },
   },
   cards: {
     display: 'grid',
