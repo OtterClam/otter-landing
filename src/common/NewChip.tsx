@@ -1,4 +1,5 @@
 import { Box, BoxProps } from '@material-ui/core';
+import { useTranslation } from 'react-i18next'
 
 type BoxStyle = BoxProps['sx'];
 
@@ -14,9 +15,10 @@ const baseStyles: BoxStyle = {
 };
 
 const NewChip = (props: BoxProps) => {
+  const { t } = useTranslation();
   return (
     <Box {...baseStyles} {...props}>
-      NEW!
+      {t('common.new')}
     </Box>
   );
 };

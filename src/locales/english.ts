@@ -41,6 +41,7 @@ const English = {
       '90Chest': '90-Day Chest',
       '28Chest': '28-Day Chest',
       '14Chest': '14-Day Chest',
+      new: 'NEW!'
     },
     time: {
       days: 'Days',
