@@ -74,6 +74,11 @@ const English = {
     },
     // src\views\Landing
     landing: {
+      about: {
+        title: 'About Otter Kingdom',
+        description: 'We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.',
+        button: 'See how the ecosystem works'
+      }
     },
     otto: {
       banner: {

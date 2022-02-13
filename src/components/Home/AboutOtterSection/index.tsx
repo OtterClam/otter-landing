@@ -6,6 +6,7 @@ import RoundedButton from 'src/components/common/RoundedButton'
 import { Container } from 'src/components/common/Container'
 import { tabletMediaQuery } from 'src/themes/mediaQuery'
 import { useMediaQuery } from '@material-ui/core'
+import { useTranslation } from "react-i18next"
 
 const _Container = styled(Container)`
   padding-top: 80px;
@@ -35,15 +36,13 @@ const ImageContainer = styled.div<{ $isTablet: boolean }>`
 
 const AboutOtterSection = () => {
   const isTablet = useMediaQuery(tabletMediaQuery)
+  const { t } = useTranslation();
   const ImageAboutOtter = isTablet ? ImageMobileAboutOtter : ImageDesktopAboutOtter
   return (
     <_Container>
       <CenteredContent>
-        <h2>About Otter Kingdom</h2>
-        <p>
-          We are passionate about decentralization, and we believe that in an industry where practically everything can
-          be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.
-        </p>
+        <h2>{t('landing.about.title')}</h2>
+        <p>{t('landing.about.description')}</p>
       </CenteredContent>
       <ImageContainer $isTablet={isTablet}>
         <Image
@@ -57,7 +56,7 @@ const AboutOtterSection = () => {
       </ImageContainer>
       <CenteredContent>
         <RoundedButton
-          text="See how the ecosystem works"
+          text={t('landing.about.button')}
           href="https://otterclam.medium.com/the-otter-kingdom-a-dao-governed-land-where-nfts-make-finance-fun-68bf877227a"
         />
       </CenteredContent>
