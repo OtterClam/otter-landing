@@ -53,42 +53,29 @@ const English = {
       second: 'Second',
       today: 'Today',
     },
+    header: {
+      treasury: 'Treasury',
+      otto: 'Otto',
+      airdrop: 'Airdrop',
+      getStarted: 'Get Started'
+    },
+    footer: {
+      partnership: 'IN PARTNERSHIP WITH',
+      copyright: '© 2022 OtterClam All Rights Reserved',
+      audit: 'Audited by',
+      resources: 'RESOURCES',
+      bigPicture: 'The Big Picture',
+      duneAnalytics: 'Dune Analytics',
+      auditReport: 'Audit Report',
+      getInvolved: 'GET INVOLVED',
+      joinDAO: 'Join the DAO',
+      contactUs: 'Contact Us',
+      mediaKit: 'Media Kit'
+    },
     // src\views\Landing
     landing: {
-      description: {
-        part1: 'The Decentralized',
-        part2: 'Reserve Memecoin',
-        tagline: 'The first store of value meme',
-      },
-      appButton: 'Enter APP',
-      footer: {
-        joinOurCommunity: 'Join Our Community',
-        letsMakeIt: "Let's make it",
-        contactUs: 'Contact Us',
-      },
-      splashPage: {
-        howOtterClamWorks: 'How OtterClam Works',
-        treasuryRevenue: 'Treasury Revenue',
-        bondsLPFees: 'Bonds & LP fees',
-        bondSales:
-          "Bond sales and LP Fees increase Otter's Treasury Revenue and lock in liquidity and help control CLAM supply",
-        treasuryGrowth: 'Treasury Growth',
-        otterTreasury: "Otter's Treasury",
-        treasuryInflow:
-          "Treasury inflow is used to increase Otter's Treasury Balance and back outstanding CLAM tokens and regulate staking APY",
-        stakingRewards: 'Staking Rewards',
-        clamToken: 'CLAM Token',
-        compounds: 'Compounds yields automatically through a treasury backed memecoin with intrinsic value',
-        treasuryBalance: 'Treasury Balance',
-        totalStaked: 'Total Staked',
-      },
     },
     otto: {
-      header: {
-        bank: 'Treasury',
-        otto: 'Otto',
-        airdrop: 'Airdrop',
-      },
       banner: {
         meet: 'Meet',
         otto: 'Otto',

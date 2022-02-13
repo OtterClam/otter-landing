@@ -5,6 +5,7 @@ import SlowmistLightModeImage from 'public/logo-slowmist-light.png'
 import FooterDeco from './images/deco-footer.webp'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useTranslation } from "react-i18next"
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -112,6 +113,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles()
+  const { t } = useTranslation();
   const { pathname } = useRouter()
   const showDeco = pathname !== '/otto'
   return (
@@ -123,7 +125,7 @@ const Footer = () => {
       )}
       <div className={`${classes.content}`}>
         <div className={classes.column}>
-          <h5 className={classes.h5}>IN PARTNERSHIP WITH</h5>
+          <h5 className={classes.h5}>{t('footer.partnership')}</h5>
           <div className={`${classes.column} ${classes.partnership}`}>
             <div className={classes.partnershipLogo}>
               <Image
@@ -138,9 +140,9 @@ const Footer = () => {
             </div>
 
             <div className={classes.partnershipText}>
-              <p className={classes.body2}>© 2022 OtterClam All Rights Reserved</p>
+              <p className={classes.body2}>{t('footer.copyright')}</p>
               <p className={`${classes.body2} ${classes.auditText}`}>
-                Audited by
+                {t('footer.audit')}
                 <div className={classes.slowmist}>
                   <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" priority />
                 </div>
@@ -149,21 +151,21 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.column}>
-          <h5 className={classes.h5}>RESOURCES</h5>
+          <h5 className={classes.h5}>{t('footer.resources')}</h5>
           <div className={classes.links}>
             {RESOURCES_LINKS.map((link, index) => (
               <Link key={`resource-${index}`} className={classes.link} href={link.href} target="__blank">
-                {link.text}
+                {t(link.i18n)}
               </Link>
             ))}
           </div>
         </div>
         <div className={classes.column}>
-          <h5 className={classes.h5}>GET INVOLVED</h5>
+          <h5 className={classes.h5}>{t('footer.getInvolved')}</h5>
           <div className={classes.links}>
             {INVOLVED_LINKS.map((link, index) => (
               <Link key={`involved-${index}`} className={classes.link} href={link.href} target="__blank">
-                {link.text}
+                {t(link.i18n)}
               </Link>
             ))}
           </div>
