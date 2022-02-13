@@ -110,6 +110,10 @@ const English = {
         title: 'SandBox',
         description: 'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
         button: 'Go to SandBox'
+      },
+      joinCommunity: {
+        title: 'Join Our Community',
+        subtitle: 'Let’s make it (🦦,🦦)'
       }
     },
     otto: {

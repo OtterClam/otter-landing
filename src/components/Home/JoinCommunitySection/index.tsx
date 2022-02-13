@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import IconGridsSection from 'src/components/common/IconGridsSection';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
+import { useTranslation } from "react-i18next";
 import {
   StyledTwitterIcon,
   StyledDocIcon,
@@ -86,11 +87,12 @@ const COMMUNITY_GRID_METADATAs = [
 ];
 
 const JoinCommunitySection = () => {
+  const { t } = useTranslation();
   return (
     <Container>
       <IconGridsSection
-        title="Join Our Community"
-        content="Let’s make it (🦦,🦦)"
+        title={t('landing.joinCommunity.title')}
+        content={t('landing.joinCommunity.subtitle')}
         theme="light"
         grids={COMMUNITY_GRID_METADATAs.map((metadata) => (
           <IconGrid
