@@ -78,6 +78,12 @@ const English = {
         title: 'About Otter Kingdom',
         description: 'We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.',
         button: 'See how the ecosystem works'
+      },
+      getStarted: {
+        title: 'How to Get Started',
+        description: 'So you’ve made it to OtterClam, you like what you see, and you’re ready to dive in. Now what? Well, you’ll need to get some CLAM to participate in the ecosystem. Although there are many ways for you to take advantage of the platform’s various features, you’ll need our native currency CLAM to get started.',
+        instruction: 'If you’re not sure how to buy CLAM, click the button below and our Otter Guide will lead you:',
+        button: 'Getting Started'
       }
     },
     otto: {
