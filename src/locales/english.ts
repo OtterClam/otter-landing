@@ -89,6 +89,27 @@ const English = {
         title1: 'Welcome to',
         title2: 'Otter Kingdom',
         subtitle: 'A DAO-governed Land Where NFTs Make Finance Fun'
+      },
+      bridge: 'Here we introduce our core features that you can explore...',
+      market: {
+        title: 'PAW Market',
+        description: 'Our market will be open and permissionless, so you can bring over your personal portfolio, or add to your collection from our own, in-house created NFT selection.',
+        button: 'Coming Soon'
+      },
+      otto: {
+        title: 'Otto NFTs',
+        description: 'Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Buy them at the Market using $CLAM, breed them to raise your own Otter family, use them in the Otter Kingdom, or give one to your friends.',
+        button: 'Go to Otto'
+      },
+      treasury: {
+        title: 'OtterClam Treasury',
+        description: "Visit the OtterClam Treasury to store your precious PEARLs in your PEARL chests. The longer you lock them up, the greater your APY. Stash enough of them for long enough, and you'll get an NFT that can be used to get bond discounts.",
+        button: 'Go to Treasury'
+      },
+      sandBox: {
+        title: 'SandBox',
+        description: 'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
+        button: 'Go to SandBox'
       }
     },
     otto: {
