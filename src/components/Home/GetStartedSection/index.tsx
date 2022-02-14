@@ -4,6 +4,7 @@ import Image from 'next/image'
 import ImageGetStarted from './images/image-get_started.webp'
 import { Container } from 'src/components/common/Container'
 import RoundedButton from 'src/components/common/RoundedButton'
+import { useTranslation } from "react-i18next"
 
 const StyledContainer = styled(Container)`
   background-color: ${(props) => props.theme.colors.common.otterDark};
@@ -58,14 +59,11 @@ interface IconGridProps {
 }
 
 const GetStartedSection = () => {
+  const { t } = useTranslation();
   return (
     <StyledContainer>
-      <StyledH2>How to Get Started</StyledH2>
-      <StyledContent>
-        So you’ve made it to OtterClam, you like what you see, and you’re ready to dive in. Now what? Well, you’ll need
-        to get some CLAM to participate in the ecosystem. Although there are many ways for you to take advantage of the
-        platform’s various features, you’ll need our native currency CLAM to get started.
-      </StyledContent>
+      <StyledH2>{t('landing.getStarted.title')}</StyledH2>
+      <StyledContent>{t('landing.getStarted.description')}</StyledContent>
       <ColoredSection>
         <ImageBox>
           <Image
@@ -79,10 +77,8 @@ const GetStartedSection = () => {
           />
         </ImageBox>
         <div>
-          <StyledP>
-            If you’re not sure how to buy CLAM, click the button below and our Otter Guide will lead you:
-          </StyledP>
-          <RoundedButton text="Getting Started" href="/get-started" target="_self" />
+          <StyledP>{t('landing.getStarted.instruction')}</StyledP>
+          <RoundedButton text={t('landing.getStarted.button')} href="/get-started" target="_self" />
         </div>
       </ColoredSection>
     </StyledContainer>

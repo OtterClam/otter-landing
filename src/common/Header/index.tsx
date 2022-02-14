@@ -13,10 +13,10 @@ export default function OttoHeader() {
   const { t } = useTranslation()
   const MENU_LINKS: LinkMetadata[] = useMemo(
     () => [
-      { text: t('otto.header.otto'), href: '/otto', new: true },
-      { text: t('otto.header.bank'), href: 'https://app.otterclam.finance/#/dashboard', new: false },
+      { text: t('header.otto'), href: '/otto', new: true },
+      { text: t('header.treasury'), href: 'https://app.otterclam.finance/#/dashboard', new: false },
       // { text: t('otto.header.airdrop'), href: 'https://www.otterclam.finance/#/nft', new: false },
-      { text: 'Get Started', href: '/get-started', new: false },
+      { text: t('header.getStarted'), href: '/get-started', new: false },
     ],
     [t]
   )

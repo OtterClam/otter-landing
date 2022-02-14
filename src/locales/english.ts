@@ -41,6 +41,7 @@ const English = {
       '90Chest': '90-Day Chest',
       '28Chest': '28-Day Chest',
       '14Chest': '14-Day Chest',
+      new: 'NEW!'
     },
     time: {
       days: 'Days',
@@ -53,42 +54,70 @@ const English = {
       second: 'Second',
       today: 'Today',
     },
+    header: {
+      treasury: 'Treasury',
+      otto: 'Otto',
+      airdrop: 'Airdrop',
+      getStarted: 'Get Started'
+    },
+    footer: {
+      partnership: 'IN PARTNERSHIP WITH',
+      copyright: '© 2022 OtterClam All Rights Reserved',
+      audit: 'Audited by',
+      resources: 'RESOURCES',
+      bigPicture: 'The Big Picture',
+      duneAnalytics: 'Dune Analytics',
+      auditReport: 'Audit Report',
+      getInvolved: 'GET INVOLVED',
+      joinDAO: 'Join the DAO',
+      contactUs: 'Contact Us',
+      mediaKit: 'Media Kit'
+    },
     // src\views\Landing
     landing: {
-      description: {
-        part1: 'The Decentralized',
-        part2: 'Reserve Memecoin',
-        tagline: 'The first store of value meme',
+      about: {
+        title: 'About Otter Kingdom',
+        description: 'We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.',
+        button: 'See how the ecosystem works'
       },
-      appButton: 'Enter APP',
-      footer: {
-        joinOurCommunity: 'Join Our Community',
-        letsMakeIt: "Let's make it",
-        contactUs: 'Contact Us',
+      getStarted: {
+        title: 'How to Get Started',
+        description: 'So you’ve made it to OtterClam, you like what you see, and you’re ready to dive in. Now what? Well, you’ll need to get some CLAM to participate in the ecosystem. Although there are many ways for you to take advantage of the platform’s various features, you’ll need our native currency CLAM to get started.',
+        instruction: 'If you’re not sure how to buy CLAM, click the button below and our Otter Guide will lead you:',
+        button: 'Getting Started'
       },
-      splashPage: {
-        howOtterClamWorks: 'How OtterClam Works',
-        treasuryRevenue: 'Treasury Revenue',
-        bondsLPFees: 'Bonds & LP fees',
-        bondSales:
-          "Bond sales and LP Fees increase Otter's Treasury Revenue and lock in liquidity and help control CLAM supply",
-        treasuryGrowth: 'Treasury Growth',
-        otterTreasury: "Otter's Treasury",
-        treasuryInflow:
-          "Treasury inflow is used to increase Otter's Treasury Balance and back outstanding CLAM tokens and regulate staking APY",
-        stakingRewards: 'Staking Rewards',
-        clamToken: 'CLAM Token',
-        compounds: 'Compounds yields automatically through a treasury backed memecoin with intrinsic value',
-        treasuryBalance: 'Treasury Balance',
-        totalStaked: 'Total Staked',
+      banner: {
+        title1: 'Welcome to',
+        title2: 'Otter Kingdom',
+        subtitle: 'A DAO-governed Land Where NFTs Make Finance Fun'
       },
+      bridge: 'Here we introduce our core features that you can explore...',
+      market: {
+        title: 'PAW Market',
+        description: 'Our market will be open and permissionless, so you can bring over your personal portfolio, or add to your collection from our own, in-house created NFT selection.',
+        button: 'Coming Soon'
+      },
+      otto: {
+        title: 'Otto NFTs',
+        description: 'Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Buy them at the Market using $CLAM, breed them to raise your own Otter family, use them in the Otter Kingdom, or give one to your friends.',
+        button: 'Go to Otto'
+      },
+      treasury: {
+        title: 'OtterClam Treasury',
+        description: "Visit the OtterClam Treasury to store your precious PEARLs in your PEARL chests. The longer you lock them up, the greater your APY. Stash enough of them for long enough, and you'll get an NFT that can be used to get bond discounts.",
+        button: 'Go to Treasury'
+      },
+      sandBox: {
+        title: 'SandBox',
+        description: 'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
+        button: 'Go to SandBox'
+      },
+      joinCommunity: {
+        title: 'Join Our Community',
+        subtitle: 'Let’s make it (🦦,🦦)'
+      }
     },
     otto: {
-      header: {
-        bank: 'Treasury',
-        otto: 'Otto',
-        airdrop: 'Airdrop',
-      },
       banner: {
         meet: 'Meet',
         otto: 'Otto',

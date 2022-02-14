@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { gsap } from 'src/utils/gsap';
 import { useMediaQuery } from '@material-ui/core';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
+import { useTranslation } from "react-i18next";
 
 import ParallaxSky from './images/parallax-fixed_background.webp';
 import ParallaxBackLand from './images/parallax-back_land.webp';
@@ -77,6 +78,7 @@ const StyledArrow = styled(IconArrow)`
 const LAYER_DEPTHs = [0, 0, 0.05, 0.1, 0.13, 0.15, 0.15, 0.15];
 const Banner = () => {
   const isTablet = useMediaQuery(tabletMediaQuery);
+  const { t } = useTranslation();
   useEffect(() => {
     const container = document.querySelector('#trigger') as HTMLDivElement;
     const layerHeight = container?.offsetHeight;
@@ -102,11 +104,11 @@ const Banner = () => {
     <Container id="trigger">
       <Content className="parallax">
         <StyledH1>
-          Welcome to
+          {t('landing.banner.title1')}
           <br />
-          Otter Kingdom
+          {t('landing.banner.title2')}
         </StyledH1>
-        <StyledH3>A DAO-governed Land Where NFTs Make Finance Fun</StyledH3>
+        <StyledH3>{t('landing.banner.subtitle')}</StyledH3>
         <StyledArrow className="arrow" />
       </Content>
       <ParallaxBox
