@@ -41,7 +41,7 @@ const English = {
       '90Chest': '90-Day Chest',
       '28Chest': '28-Day Chest',
       '14Chest': '14-Day Chest',
-      new: 'NEW!'
+      new: 'NEW!',
     },
     time: {
       days: 'Days',
@@ -58,7 +58,7 @@ const English = {
       treasury: 'Treasury',
       otto: 'Otto',
       airdrop: 'Airdrop',
-      getStarted: 'Get Started'
+      getStarted: 'Get Started',
     },
     footer: {
       partnership: 'IN PARTNERSHIP WITH',
@@ -71,59 +71,65 @@ const English = {
       getInvolved: 'GET INVOLVED',
       joinDAO: 'Join the DAO',
       contactUs: 'Contact Us',
-      mediaKit: 'Media Kit'
+      mediaKit: 'Media Kit',
     },
     // src\views\Landing
     landing: {
       about: {
         title: 'About Otter Kingdom',
-        description: 'We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.',
-        button: 'See how the ecosystem works'
+        description:
+          'We are passionate about decentralization, and we believe that in an industry where practically everything can be replicated, our community culture and the art that gave it life, are what ultimately sets us apart.',
+        button: 'See how the ecosystem works',
       },
       getStarted: {
         title: 'How to Get Started',
-        description: 'So you’ve made it to OtterClam, you like what you see, and you’re ready to dive in. Now what? Well, you’ll need to get some CLAM to participate in the ecosystem. Although there are many ways for you to take advantage of the platform’s various features, you’ll need our native currency CLAM to get started.',
+        description:
+          'So you’ve made it to OtterClam, you like what you see, and you’re ready to dive in. Now what? Well, you’ll need to get some CLAM to participate in the ecosystem. Although there are many ways for you to take advantage of the platform’s various features, you’ll need our native currency CLAM to get started.',
         instruction: 'If you’re not sure how to buy CLAM, click the button below and our Otter Guide will lead you:',
-        button: 'Getting Started'
+        button: 'Getting Started',
       },
       banner: {
         title1: 'Welcome to',
         title2: 'Otter Kingdom',
-        subtitle: 'A DAO-governed Land Where NFTs Make Finance Fun'
+        subtitle: 'A DAO-governed Land Where NFTs Make Finance Fun',
       },
       bridge: 'Here we introduce our core features that you can explore...',
       market: {
         title: 'PAW Market',
-        description: 'Our market will be open and permissionless, so you can bring over your personal portfolio, or add to your collection from our own, in-house created NFT selection.',
-        button: 'Coming Soon'
+        description:
+          'Our market will be open and permissionless, so you can bring over your personal portfolio, or add to your collection from our own, in-house created NFT selection.',
+        button: 'Coming Soon',
       },
       otto: {
         title: 'Otto NFTs',
-        description: 'Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Buy them at the Market using $CLAM, breed them to raise your own Otter family, use them in the Otter Kingdom, or give one to your friends.',
-        button: 'Go to Otto'
+        description:
+          'The First Citizens of the Otter Kingdom. Breedable. Stakeable. Loveable! Ottos from the Genesis Collection are not only the cutest otters in the kingdom, they also have exclusive privileges.  Buy them with $CLAM, breed them to raise your Otter family, use them in the Otter Kingdom, or just give one to your friends!',
+        button: 'Go to Otto',
       },
       treasury: {
         title: 'OtterClam Treasury',
-        description: "Visit the OtterClam Treasury to store your precious PEARLs in your PEARL chests. The longer you lock them up, the greater your APY. Stash enough of them for long enough, and you'll get an NFT that can be used to get bond discounts.",
-        button: 'Go to Treasury'
+        description:
+          "Visit the OtterClam Treasury to store your precious PEARLs in your PEARL chests. The longer you lock them up, the greater your APY. Stash enough of them for long enough, and you'll get an NFT that can be used to get bond discounts.",
+        button: 'Go to Treasury',
       },
       sandBox: {
         title: 'SandBox',
-        description: 'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
-        button: 'Go to SandBox'
+        description:
+          'Our metaverse adventure in the Sandbox has only just begun! Use your Otto VX to play games, explore our kingdom, or participate in special events. More features coming soon.',
+        button: 'Go to SandBox',
       },
       joinCommunity: {
         title: 'Join Our Community',
-        subtitle: 'Let’s make it (🦦,🦦)'
-      }
+        subtitle: 'Let’s make it (🦦,🦦)',
+      },
     },
     otto: {
       banner: {
         meet: 'Meet',
         otto: 'Otto',
-        slogan: "The Otter Kingdom's newest NFT innovation",
+        slogan: 'The First Citizens of the Otter Kingdom',
         description:
-          'Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Some appear normal. Some look crazy. Some are just damn cool!',
+          'Breedable. Stakeable. Loveable! Ottos from the Genesis Collection are not only the cutest otters in the kingdom, they also have exclusive privileges. Wanna know more? Check out the roadmap below.',
       },
       whitelist: {
         amount: 'Genesis Release',
@@ -200,7 +206,7 @@ const English = {
         beneficialContent: 'Owners can use Ottos anywhere in the kingdom to reap benefits.',
       },
       roadMap: {
-        title: 'Otto Roadmap'
+        title: 'Otto Roadmap',
       },
       countdown: {
         mintTitle: 'Mint your Ottos!',

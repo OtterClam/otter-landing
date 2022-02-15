@@ -7,7 +7,7 @@ import OttoComponentSection from 'src/components/Otto/OttoComponentSection'
 import OttoFactorySection from 'src/components/Otto/OttoFactorySection'
 import OtterRiverSection from 'src/components/Otto/OttoRiverSection'
 import OttoUsageSection from 'src/components/Otto/OtterUsageSection'
-import OttoRoadMapSection from 'src/components/Otto/OtterRoadmapSection';
+import OttoRoadMapSection from 'src/components/Otto/OtterRoadmapSection'
 import OttoCountdownSection from 'src/components/Otto/OttoCountdownSection'
 import Head from 'next/head'
 
@@ -24,7 +24,7 @@ const OttoPage = () => {
     <div className={classes.view}>
       <Head>
         <title>Otto | The Otter Kingdom&apos;s newest NFT innovation</title>
-        <meta property="og:title" content="Otto | The Otter Kingdom's newest NFT innovation" />
+        <meta property="og:title" content="Otto | The First Citizens of the Otter Kingdom" />
         <meta
           property="og:description"
           content="Ottos are unique and randomly generated 2D NFT Social Avatars created to enhance your online experience. Some appear normal. Some look crazy. Some are just damn cool!"
