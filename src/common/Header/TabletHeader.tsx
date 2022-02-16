@@ -137,7 +137,7 @@ const OttoTabletHeader = ({ linkMetadata }: Props) => {
                 key={metadata.text}
                 className={classes.menuLink}
                 href={metadata.href}
-                target="__blank"
+                target={metadata.external ? "__blank" : "_self"}
               >
                 {metadata.text}
                 {metadata.new && <NewChip marginLeft="4px" />}

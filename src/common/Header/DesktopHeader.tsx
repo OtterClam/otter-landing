@@ -80,7 +80,7 @@ export default function OttoDesktopHeader({ linkMetadata }: Props) {
               key={i}
               className={classes.link}
               href={metadata.href}
-              target="__blank"
+              target={metadata.external ? "__blank" : "_self"}
             >
               {metadata.text} {metadata.new && <NewChip marginLeft="10px" />}
             </a>
