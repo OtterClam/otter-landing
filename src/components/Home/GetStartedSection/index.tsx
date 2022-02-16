@@ -73,7 +73,6 @@ const GetStartedSection = () => {
             height={168}
             alt="get started"
             placeholder="blur"
-            priority
           />
         </ImageBox>
         <div>

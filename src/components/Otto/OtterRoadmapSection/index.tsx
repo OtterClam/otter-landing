@@ -42,7 +42,6 @@ const OtterRoadMapSection = () => {
           height={image.height}
           alt="road map"
           placeholder="blur"
-          priority
         />
     </div>
   );

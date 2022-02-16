@@ -120,7 +120,7 @@ const Footer = () => {
     <div className={classes.container}>
       {showDeco && (
         <div className={classes.deco}>
-          <Image layout="fill" src={FooterDeco} alt="footer deco" priority />
+          <Image layout="fill" src={FooterDeco} alt="footer deco" />
         </div>
       )}
       <div className={`${classes.content}`}>
@@ -135,7 +135,6 @@ const Footer = () => {
                 alt="partnership"
                 layout="fixed"
                 placeholder="blur"
-                priority
               />
             </div>
 
@@ -144,7 +143,7 @@ const Footer = () => {
               <p className={`${classes.body2} ${classes.auditText}`}>
                 {t('footer.audit')}
                 <div className={classes.slowmist}>
-                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" priority />
+                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" />
                 </div>
               </p>
             </div>

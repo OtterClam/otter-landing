@@ -19,18 +19,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    Promise.all(
-      Array.from(document.images)
-        .filter((img) => !img.complete)
-        .map(
-          (img) =>
-            new Promise((resolve) => {
-              img.onload = img.onerror = resolve;
-            })
-        )
-    ).then(() => {
-      setLoading(false);
-    });
+    const loadCallback = () => {
+      Promise.all(
+        Array.from(document.images).map((img) => {
+          img.onload = Promise.resolve;
+        })
+      ).then(() => {
+        setLoading(false);
+      });
+    };
+    window.addEventListener('load', loadCallback);
+    return () => {
+      window.removeEventListener('load', loadCallback);
+    };
   }, [setLoading]);
   return (
     <MUIThemeProvider theme={light}>
