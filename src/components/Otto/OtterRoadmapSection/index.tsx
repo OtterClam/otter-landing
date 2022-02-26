@@ -34,16 +34,15 @@ const OtterRoadMapSection = () => {
   return (
     <div className={`container ${classes.container}`}>
       <h4 className={classes.h4}>{t('otto.roadMap.title')}</h4>
-        <Image
-          className={classes.image}
-          src={image}
-          layout="responsive"
-          width={image.width}
-          height={image.height}
-          alt="road map"
-          placeholder="blur"
-          priority
-        />
+      <Image
+        className={classes.image}
+        src={image}
+        layout="responsive"
+        width={image.width}
+        height={image.height}
+        alt="road map"
+        loading="eager"
+      />
     </div>
   );
 };

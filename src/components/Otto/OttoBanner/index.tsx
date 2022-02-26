@@ -125,7 +125,7 @@ const OttoBanner = () => {
         </div>
       </div>
       <div className={classes.sectionRight}>
-        <Image className={classes.image} src={OttoHeroImage} alt="banner" priority />
+        <Image className={classes.image} src={OttoHeroImage} alt="banner" loading="eager" />
       </div>
     </div>
   )

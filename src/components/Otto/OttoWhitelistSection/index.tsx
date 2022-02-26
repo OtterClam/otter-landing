@@ -85,12 +85,12 @@ const OttoWhitelistSection = () => {
     <div className={classes.container}>
       {!isTablet && (
         <div className={classes.image}>
-          <Image layout="fill" objectFit="cover" src={WhiteListLeftBg} alt="whitelist" placeholder="blur" priority />
+          <Image layout="fill" objectFit="cover" src={WhiteListLeftBg} alt="whitelist" loading="eager" />
         </div>
       )}
       {isTablet && (
         <div className={classes.tabletImage}>
-          <Image layout="fill" objectFit="cover" src={WhiteListTopBg} alt="whitelist" placeholder="blur" priority />
+          <Image layout="fill" objectFit="cover" src={WhiteListTopBg} alt="whitelist" loading="eager" />
         </div>
       )}
       <div className={`${classes.content} ${classes.content}`}>
@@ -105,7 +105,7 @@ const OttoWhitelistSection = () => {
       </div>
       {!isTablet && (
         <div className={classes.image}>
-          <Image layout="fill" objectFit="cover" src={WhiteListRightBg} alt="whitelist" placeholder="blur" priority />
+          <Image layout="fill" objectFit="cover" src={WhiteListRightBg} alt="whitelist" loading="eager" />
         </div>
       )}
     </div>

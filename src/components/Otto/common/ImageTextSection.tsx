@@ -72,7 +72,7 @@ interface ImageProps {
 }
 const ImageSection = ({ imgSrc }: ImageProps) => {
   const classes = useStyles();
-  return <div className={classes.image}><Image src={imgSrc} alt="" /></div>
+  return <div className={classes.image}><Image src={imgSrc} alt="" loading="eager" /></div>
 }
 
 interface TextProps {

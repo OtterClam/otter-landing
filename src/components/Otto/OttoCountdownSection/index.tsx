@@ -65,7 +65,7 @@ const OttoCountdownSection = () => {
   return (
     <div className={classes.container}>
       <div className={classes.decoLeft}>
-        <Image src={OttoDecoLeftImage} alt="countdown left" placeholder="blur" priority />
+        <Image src={OttoDecoLeftImage} alt="countdown left" loading="eager" />
       </div>
       <h4 className={classes.title}>{t('otto.countdown.mintTitle')}</h4>
       <p className={classes.content}>COMING SOON</p>
@@ -79,7 +79,7 @@ const OttoCountdownSection = () => {
       {/* TODO|OTTO: add time up callback */}
       <OttoBuyClamHint />
       <div className={classes.decoRight}>
-        <Image src={OttoDecoRightImage} alt="countdown right" placeholder="blur" priority />
+        <Image src={OttoDecoRightImage} alt="countdown right" placeholder="blur" />
       </div>
     </div>
   )
