@@ -52,6 +52,7 @@ const LoadingScreen = ({ show }: Props) => {
           alt="loading animation"
           quality={100}
           priority
+          unoptimized={true}
         />
       </ImageWrapper>
     </Container>
