@@ -50,7 +50,6 @@ const AboutOtterSection = () => {
           layout="fill"
           objectFit={isTablet ? 'cover' : 'contain'}
           alt="about otter kingdom"
-          loading="eager"
         />
       </ImageContainer>
       <CenteredContent>

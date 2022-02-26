@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { gsap } from 'src/utils/gsap';
 import { useMediaQuery } from '@material-ui/core';
 import { tabletMediaQuery } from 'src/themes/mediaQuery';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 import ParallaxSky from './images/parallax-fixed_background.webp';
 import ParallaxBackLand from './images/parallax-back_land.webp';
@@ -12,6 +12,7 @@ import ParallaxOtters from './images/parallax-otters.webp';
 import ParallaxLeft from './images/parallax-front_left.webp';
 import ParallaxRight from './images/parallax-front_right.webp';
 import IconArrow from './images/arrow.svg';
+import Image from 'next/image';
 
 const Container = styled.div`
   position: relative;
@@ -85,8 +86,8 @@ const Banner = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#trigger',
-        start: "top top",
-        end: "bottom top",
+        start: 'top top',
+        end: 'bottom top',
         scrub: true,
       },
     });
@@ -95,10 +96,8 @@ const Banner = () => {
       .toArray<HTMLDivElement>('.parallax')
       .forEach((layer: HTMLDivElement, index: number) => {
         const movement = -(layerHeight * LAYER_DEPTHs[index]);
-        tl
-          .to(layer, { y: movement, ease: 'none' }, 0)
+        tl.to(layer, { y: movement, ease: 'none' }, 0);
       });
-    console.log('called!')
   }, []);
   return (
     <Container id="trigger">
@@ -111,47 +110,72 @@ const Banner = () => {
         <StyledH3>{t('landing.banner.subtitle')}</StyledH3>
         <StyledArrow className="arrow" />
       </Content>
-      <ParallaxBox
-        className="parallax"
-        style={{
-          background: `url(${ParallaxSky.src}) top/cover no-repeat`,
-        }}
-      />
-      <ParallaxBox
-        className="parallax"
-        style={{
-          background: `url(${ParallaxBackLand.src}) top/cover no-repeat`,
-        }}
-      />
-      <ParallaxBox
-        className="parallax"
-        style={{
-          background: `url(${ParallaxMiddleLand.src}) top/cover no-repeat`,
-        }}
-      />
-      <ParallaxBox
-        className="parallax"
-        style={{
-          background: `url(${ParallaxOtters.src}) top/cover no-repeat`,
-        }}
-      />
+      <ParallaxBox>
+        <Image
+          className="parallax"
+          src={ParallaxSky.src}
+          layout="fill"
+          objectFit="cover"
+          alt="banner image"
+          priority
+        />
+      </ParallaxBox>
+      <ParallaxBox>
+        <Image
+          className="parallax"
+          src={ParallaxBackLand.src}
+          layout="fill"
+          objectFit="cover"
+          alt="banner image"
+          priority
+        />
+      </ParallaxBox>
+      <ParallaxBox>
+        <Image
+          className="parallax"
+          src={ParallaxMiddleLand.src}
+          layout="fill"
+          objectFit="cover"
+          alt="banner image"
+          priority
+        />
+      </ParallaxBox>
+      <ParallaxBox>
+        <Image
+          className="parallax"
+          src={ParallaxOtters.src}
+          layout="fill"
+          objectFit="cover"
+          alt="banner image"
+          priority
+        />
+      </ParallaxBox>
+
       {!isTablet && (
         <>
-          <ParallaxBox
-            className="parallax"
-            style={{
-              background: `url(${ParallaxRight.src}) top/cover no-repeat`,
-            }}
-          />
-          <ParallaxBox
-            className="parallax"
-            style={{
-              background: `url(${ParallaxLeft.src}) top/cover no-repeat`,
-            }}
-          />
+          <ParallaxBox>
+            <Image
+              className="parallax"
+              src={ParallaxRight.src}
+              layout="fill"
+              objectFit="cover"
+              alt="banner image"
+              priority
+            />
+          </ParallaxBox>
+          <ParallaxBox>
+            <Image
+              className="parallax"
+              src={ParallaxLeft.src}
+              layout="fill"
+              objectFit="cover"
+              alt="banner image"
+              priority
+            />
+          </ParallaxBox>
         </>
       )}
-            <FullMask />
+      <FullMask />
     </Container>
   );
 };

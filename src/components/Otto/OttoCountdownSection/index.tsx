@@ -65,7 +65,7 @@ const OttoCountdownSection = () => {
   return (
     <div className={classes.container}>
       <div className={classes.decoLeft}>
-        <Image src={OttoDecoLeftImage} alt="countdown left" placeholder="blur" />
+        <Image src={OttoDecoLeftImage} alt="countdown left" loading="eager" />
       </div>
       <h4 className={classes.title}>{t('otto.countdown.mintTitle')}</h4>
       <p className={classes.content}>COMING SOON</p>

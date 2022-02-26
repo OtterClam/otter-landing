@@ -134,8 +134,6 @@ const Footer = () => {
                 height={62}
                 alt="partnership"
                 layout="fixed"
-                placeholder="blur"
-                loading="eager"
               />
             </div>
 

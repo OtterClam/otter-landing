@@ -85,7 +85,7 @@ const OttoImage = ({ className, type }: ImageProps) => {
   })()
   return (
     <div className={className}>
-      <Image src={imgSrc} alt={type} placeholder="blur" />
+      <Image src={imgSrc} alt={type} loading="eager" />
     </div>
   )
 }

@@ -20,12 +20,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const incompleteImages = Array.from(document.images).filter(image => !image.complete);
-    let incompleteCount = incompleteImages.length
-    if (!incompleteCount) return setLoading(false);
+    let incompleteCount = incompleteImages.length;
+    const lazyDisableLoading = () => {
+      setTimeout(() => setLoading(false), 500);
+    }
+    if (!incompleteCount) {
+      lazyDisableLoading();
+      return;
+    }
     incompleteImages.map((image) => {
       image.addEventListener('load', (e) => {
         incompleteCount -= 1
-        if (incompleteCount <= 0) setLoading(false);
+        if (incompleteCount <= 0) {
+          lazyDisableLoading();
+        }
       });
     }, false)
   }, [setLoading]);

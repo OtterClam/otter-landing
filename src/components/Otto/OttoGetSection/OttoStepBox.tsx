@@ -51,19 +51,19 @@ const StepImage = ({ number }: { number: number }) => {
     case 1:
       return (
         <div className={classes.image}>
-          <Image src={ImageStep1} alt="step1" placeholder="blur" />
+          <Image src={ImageStep1} alt="step1" loading="eager" />
         </div>
       )
     case 2:
       return (
         <div className={classes.image}>
-          <Image src={ImageStep2} alt="step2" placeholder="blur" />
+          <Image src={ImageStep2} alt="step2" loading="eager" />
         </div>
       )
     case 3:
       return (
         <div className={classes.image}>
-          <Image src={ImageStep3} alt="step3" placeholder="blur" />
+          <Image src={ImageStep3} alt="step3" loading="eager" />
         </div>
       )
     default:

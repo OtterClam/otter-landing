@@ -68,11 +68,10 @@ export default function OttoDesktopHeader({ linkMetadata }: Props) {
     <header className={classes.header}>
       <div className={classes.container}>
         <div className={classes.sectionLeft}>
-          <Link href='/' passHref>
-          <a className={classes.logo}>
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a className={classes.logo} href='/' target="_self">
             <Logo />
           </a>
-          </Link>
         </div>
         <div className={classes.sectionRight}>
           {linkMetadata.map((metadata, i) => (

@@ -72,7 +72,6 @@ const GetStartedSection = () => {
             width={200}
             height={168}
             alt="get started"
-            loading="eager"
           />
         </ImageBox>
         <div>
