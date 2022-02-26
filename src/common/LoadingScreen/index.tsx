@@ -23,7 +23,14 @@ const Container = styled.div<{ $show: boolean }>`
 `;
 
 const ImageWrapper = styled.div<{ $show: boolean }>`
+  display: block;
+  width: 400px;
+  height: 400px;
   transition: all 0.3s ease-out;
+  @media ${tabletMediaQuery} {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 interface Props {
@@ -38,19 +45,15 @@ const LoadingScreen = ({ show }: Props) => {
   }, []);
 
   const isTablet = useMediaQuery(tabletMediaQuery);
-  const animationSize = (() => {
-    if (isTablet) return 200;
-    return 400;
-  })();
   return (
     <Container $show={show}>
       <ImageWrapper $show={show}>
         <Image
           src={animation.src}
-          width={animationSize}
-          height={animationSize}
+          width={animation.width}
+          height={animation.height}
+          layout="responsive"
           alt="loading animation"
-          quality={100}
           priority
           unoptimized={true}
         />
