@@ -42,6 +42,7 @@ const ImageSection = ({ sizing, imageRatio, image, alt }: ImageProps) => {
         height={sizing === 'full' ? undefined : image.height}
         width={sizing === 'full' ? undefined : image.width}
         objectFit={sizing === 'full' ? 'cover' : 'contain'}
+        loading="eager"
       />
     </_Container>
   )
@@ -92,7 +93,7 @@ const ContentSection = ({ hasDeco = false, textProps, buttonProps }: ContentProp
       <ContentContainer>
         {hasDeco && (
           <DecoContainer>
-            <Image src={ImageBankDeco} height={32} width={116} layout="fixed" objectFit="contain" alt="deco" />
+            <Image src={ImageBankDeco} height={32} width={116} layout="fixed" objectFit="contain" alt="deco" loading="eager" />
           </DecoContainer>
         )}
         <StyledH2>{textProps.title}</StyledH2>

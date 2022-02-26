@@ -53,7 +53,7 @@ const UsageImage = ({ className, type }: ImageProps) => {
         return BeneficialEcosystemImage
     }
   })()
-  return <Image className={className} src={imgSrc} alt="type" />
+  return <Image className={className} src={imgSrc} alt="type" loading="eager" />
 }
 
 interface Props {

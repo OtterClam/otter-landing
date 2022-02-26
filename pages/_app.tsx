@@ -19,29 +19,25 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const loadCallback = () => {
-      Promise.all(
-        Array.from(document.images).map((img) => {
-          img.onload = Promise.resolve;
-        })
-      ).then(() => {
-        setLoading(false);
+    const incompleteImages = Array.from(document.images).filter(image => !image.complete);
+    let incompleteCount = incompleteImages.length
+    if (!incompleteCount) return setLoading(false);
+    incompleteImages.map((image) => {
+      image.addEventListener('load', (e) => {
+        incompleteCount -= 1
+        if (incompleteCount <= 0) setLoading(false);
       });
-    };
-    window.addEventListener('load', loadCallback);
-    return () => {
-      window.removeEventListener('load', loadCallback);
-    };
+    }, false)
   }, [setLoading]);
   return (
     <MUIThemeProvider theme={light}>
       <StyledThemeProvider theme={theme}>
         <GlobalStyle />
         <CssBaseline />
+        <LoadingScreen show={loading} />
         <Header />
         <Component {...pageProps} />
         <Footer />
-        <LoadingScreen show={loading} />
       </StyledThemeProvider>
     </MUIThemeProvider>
   );

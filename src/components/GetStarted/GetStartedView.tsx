@@ -70,7 +70,7 @@ const GetStartedView = () => {
             height={74}
             layout="intrinsic"
             alt="Matic to Clam"
-            placeholder="blur"
+            loading="eager"
           />
         </ImageContainer>
         <p>
@@ -98,7 +98,7 @@ const GetStartedView = () => {
             height={74}
             layout="intrinsic"
             alt="Clam to sClam"
-            placeholder="blur"
+            loading="eager"
           />
         </ImageContainer>
         <p>
@@ -119,7 +119,7 @@ const GetStartedView = () => {
             height={74}
             layout="intrinsic"
             alt="Clam to Pearl"
-            placeholder="blur"
+            loading="eager"
           />
         </ImageContainer>
         <p>
@@ -149,7 +149,7 @@ const GetStartedView = () => {
             height={74}
             layout="intrinsic"
             alt="Pearl to Chest"
-            placeholder="blur"
+            loading="eager"
           />
         </ImageContainer>
         <p>
@@ -189,7 +189,7 @@ const GetStartedView = () => {
             height={74}
             layout="intrinsic"
             alt="Bond to sClam"
-            placeholder="blur"
+            loading="eager"
           />
         </ImageContainer>
         <p>

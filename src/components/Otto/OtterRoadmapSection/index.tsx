@@ -41,7 +41,7 @@ const OtterRoadMapSection = () => {
           width={image.width}
           height={image.height}
           alt="road map"
-          placeholder="blur"
+          loading="eager"
         />
     </div>
   );
