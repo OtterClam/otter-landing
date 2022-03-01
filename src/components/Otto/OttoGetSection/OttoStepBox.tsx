@@ -4,11 +4,14 @@ import { DescriptionMetadata } from './type'
 import ImageStep1 from './step1.png'
 import ImageStep2 from './step2.png'
 import ImageStep3 from './step3.png'
+import ImageStep4 from './step4.png'
 import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   container: {
     textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
   },
   label: {
     color: theme.palette.mode.white,
@@ -33,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '24px',
     fontWeight: 700,
     whiteSpace: 'pre-line',
+  },
+  textContainer: {
+    flex: 1,
   },
   button: {
     marginTop: '20px',
@@ -66,6 +72,12 @@ const StepImage = ({ number }: { number: number }) => {
           <Image src={ImageStep3} alt="step3" loading="eager" />
         </div>
       )
+    case 4:
+      return (
+        <div className={classes.image}>
+          <Image src={ImageStep4} alt="step4" loading="eager" />
+        </div>
+      )
     default:
       return <></>
   }
@@ -81,20 +93,22 @@ const OttoStepBox = ({ metadata, number }: Props) => {
     <div className={classes.container}>
       <div className={classes.label}>{number}</div>
       <StepImage number={number} />
-      {metadata.description.map((description, index) => {
-        if (description.type === 'highlight')
+      <div className={classes.textContainer}>
+        {metadata.description.map((description, index) => {
+          if (description.type === 'highlight')
+            return (
+              <span key={`desc-${index}`} className={classes.highlight}>
+                {description.text}
+                <br />
+              </span>
+            )
           return (
-            <span key={`desc-${index}`} className={classes.highlight}>
+            <span key={`desc-${index}`} className={classes.content}>
               {description.text}
-              <br />
             </span>
           )
-        return (
-          <span key={`desc-${index}`} className={classes.content}>
-            {description.text}
-          </span>
-        )
-      })}
+        })}
+      </div>
       <div className={classes.button}>
         <RoundedButton href={metadata.button.href} text={metadata.button.text} />
       </div>

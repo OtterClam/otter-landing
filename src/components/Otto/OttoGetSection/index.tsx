@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   boxes: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
     gridColumnGap: '20px',
     [theme.breakpoints.down('md')]: {
       gridTemplateColumns: 'auto',
@@ -53,6 +53,17 @@ const OttoGetSection = () => {
           { type: 'normal', text: t('otto.get.buyClam1') },
           { type: 'highlight', text: t('otto.get.buyClamHighlight') },
           { type: 'normal', text: t('otto.get.buyClam2') },
+        ],
+        button: {
+          text: t('otto.get.buyClamButton'),
+          href: 'https://quickswap.exchange/#/swap?outputCurrency=0xC250e9987A032ACAC293d838726C511E6E1C029d',
+        },
+      },
+      {
+        description: [
+          { type: 'normal', text: t('otto.get.incubator1') },
+          // { type: 'highlight', text: t('otto.get.incubator2') },
+          { type: 'normal', text: t('otto.get.incubator3') },
         ],
         button: {
           text: t('otto.get.buyClamButton'),

@@ -93,7 +93,7 @@ const OttoWhitelistSection = () => {
           <Image layout="fill" objectFit="cover" src={WhiteListTopBg} alt="whitelist" loading="eager" />
         </div>
       )}
-      <div className={`${classes.content} ${classes.content}`}>
+      <div className={`${classes.content}`}>
         <p className={classes.body2}>{t('otto.whitelist.amount')}</p>
         <h3 className={classes.h3}>5,000 Ottos</h3>
         <p className={classes.body1}>

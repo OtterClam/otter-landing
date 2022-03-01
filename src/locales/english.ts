@@ -144,12 +144,15 @@ const English = {
         discordButton: 'Open Discord',
         buyClam1: 'Purchase ',
         buyClamHighlight: 'CLAM',
-        buyClam2: 'Ottos can ONLY be minted by CLAM.',
+        buyClam2:
+          'Otto Incubators can be minted using CLAM or ETH, but you will have 30% discount with CLAM! Ottos can ONLY be minted by CLAM.',
         buyClamButton: 'Buy CLAM',
         calendar1: 'Mint Ottos with CLAM.\n',
         calendarHighlight: 'Jan 29',
         calendar2: 'Only 5000 available, act fast!',
         calendarButton: 'Coming Soon',
+        incubator1: 'Mint Otto Incubators with Whitelist Ticket and CLAM/ETH\n',
+        incubator3: 'Only 5000 available, act fast!',
       },
       type: {
         title: 'Types of Otto',
