@@ -1,14 +1,12 @@
-import styled from 'styled-components'
-import { tabletMediaQuery } from 'src/themes/mediaQuery'
-import { Divider, Container as CardContainer, ImageContainer, HintText } from './common'
-
 import Image from 'next/image'
-import ImageMatic2Clam from './images/image-matic2clam.png'
-import ImageClam2SClam from './images/image-clam2sclam.png'
-import ImageClam2Pearl from './images/image-clam2pearl.png'
-import ImagePearl2Chest from './images/image-pearl2chest.png'
-import ImageBond2SClam from './images/image-bond2sclam.png'
 import { useTranslation } from 'react-i18next'
+import { tabletMediaQuery } from 'src/themes/mediaQuery'
+import styled from 'styled-components'
+import { Container as CardContainer, Divider, ImageContainer } from './common'
+import ImageBond2SClam from './images/image-bond2sclam.png'
+import ImageClam2Pearl from './images/image-clam2pearl.png'
+import ImageMatic2Clam from './images/image-matic2clam.png'
+import ImagePearl2Chest from './images/image-pearl2chest.png'
 
 const StyledContainer = styled.div`
   padding-top: 140px;
@@ -64,13 +62,7 @@ const GetStartedView = () => {
         <h3>{t('getStarted.paragraph2.title')}</h3>
         <p>{t('getStarted.paragraph2.content')}</p>
         <ImageContainer>
-          <Image
-            src={ImageMatic2Clam}
-            width={162}
-            height={74}
-            layout="intrinsic"
-            alt="Matic to Clam"
-          />
+          <Image src={ImageMatic2Clam} width={162} height={74} layout="intrinsic" alt="Matic to Clam" />
         </ImageContainer>
         <p>
           Need more details than that? We got you. Check out
@@ -91,45 +83,13 @@ const GetStartedView = () => {
           to stake.{' '}
         </p>
         <ImageContainer>
-          <Image
-            src={ImageClam2SClam}
-            width={162}
-            height={74}
-            layout="intrinsic"
-            alt="Clam to sClam"
-          />
+          <Image src={ImageClam2Pearl} width={163} height={75} layout="intrinsic" alt="Clam to Pearl" />
         </ImageContainer>
         <p>
           This is the most basic way to take advantage of holding CLAM. Staking is immediate and you can unstake anytime
           you like. Maximum flexibility, maximum convenience. For those of you interested in increasing your CLAM
           returns, read on.{' '}
         </p>
-        <Divider />
-        <h3>Convert to PEARL</h3>
-        <p>
-          Converting your sCLAM to PEARL requires “wrapping.” Wrapping your sCLAM ensures you receive sCLAM rebase
-          rewards, but it also opens up a new tier of investment potential.
-        </p>
-        <ImageContainer>
-          <Image
-            src={ImageClam2Pearl}
-            width={270}
-            height={74}
-            layout="intrinsic"
-            alt="Clam to Pearl"
-          />
-        </ImageContainer>
-        <p>
-          To wrap your sCLAM, go{' '}
-          <a href="https://app.otterclam.finance/#/wrap" target="_blank" rel="noreferrer">
-            here
-          </a>
-          .
-        </p>
-        <HintText>
-          Note: because some countries consider each rebase reward a taxable event, wrapping your sCLAM avoids this
-          issue. Your PEARL’s value will reflect the rebase rewards of your staked CLAM.
-        </HintText>
         <Divider />
         <h3>Lock PEARL</h3>
         <p>
@@ -140,13 +100,7 @@ const GetStartedView = () => {
         </p>
         <h3>PEARL Chests</h3>
         <ImageContainer>
-          <Image
-            src={ImagePearl2Chest}
-            width={182}
-            height={74}
-            layout="intrinsic"
-            alt="Pearl to Chest"
-          />
+          <Image src={ImagePearl2Chest} width={182} height={74} layout="intrinsic" alt="Pearl to Chest" />
         </ImageContainer>
         <p>
           The Otter Kingdom has a huge vault deep below the riverbed containing countless chests ready to secure your
@@ -179,13 +133,7 @@ const GetStartedView = () => {
           the protocol needs liquidity for certain assets.
         </p>
         <ImageContainer>
-          <Image
-            src={ImageBond2SClam}
-            width={162}
-            height={74}
-            layout="intrinsic"
-            alt="Bond to sClam"
-          />
+          <Image src={ImageBond2SClam} width={162} height={74} layout="intrinsic" alt="Bond to sClam" />
         </ImageContainer>
         <p>
           Now, we have (4,4) bonds that allow you to enjoy rewards from the time you bond until it’s time to claim your
