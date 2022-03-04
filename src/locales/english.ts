@@ -144,10 +144,9 @@ const English = {
         discordButton: 'Open Discord',
         buyClam1: 'Purchase ',
         buyClamHighlight: 'CLAM',
-        buyClam2:
-          'Otto Incubators can be minted using CLAM or ETH, but you will receive a 25% discount with CLAM.',
+        buyClam2: 'Otto Incubators can be minted using CLAM or ETH, but you will receive a 30% discount with CLAM.',
         buyClamButton: 'Buy CLAM',
-        calendar1: 'Ottos need time and nourishment to grow in the incubators.',
+        calendar1: 'Ottos need time and nourishment to grow in the incubators. ',
         calendarHighlight: 'Jan 29',
         calendar2: 'When the time is up, hatch your unique Otto!',
         calendarButton: 'Coming Soon',
@@ -215,7 +214,7 @@ const English = {
         mintTitle: 'Mint your Ottos!',
         mintSubtitle: 'Mint Countdown',
         hintDescription:
-          'Ottos can only be minted using CLAM, so make sure you have the required amount prior to minting.',
+          'Ottos can be minted using ETH/CLAM, so make sure you have the required amount prior to minting.',
         buyNow: 'BUY NOW',
       },
     },

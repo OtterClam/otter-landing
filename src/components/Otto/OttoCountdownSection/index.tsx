@@ -5,6 +5,7 @@ import OttoDecoLeftImage from './image-countdown_deco_left.png'
 import OttoDecoRightImage from './image-countdown_deco_right.png'
 
 import Image from 'next/image'
+import Countdown from 'src/common/Countdown'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -68,14 +69,13 @@ const OttoCountdownSection = () => {
         <Image src={OttoDecoLeftImage} alt="countdown left" loading="eager" />
       </div>
       <h4 className={classes.title}>{t('otto.countdown.mintTitle')}</h4>
-      <p className={classes.content}>COMING SOON</p>
-      {/* <Countdown
+      <Countdown
         title={t('otto.countdown.mintSubtitle')}
         color="mode.white"
         bgcolor="mode.darkBlue"
-        dueDate={new Date()}
+        dueDate={new Date(Date.UTC(2022, 2, 19, 13))}
         onTimeUp={() => {}}
-      /> */}
+      />
       {/* TODO|OTTO: add time up callback */}
       <OttoBuyClamHint />
       <div className={classes.decoRight}>
