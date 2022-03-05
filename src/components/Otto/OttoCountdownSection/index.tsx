@@ -6,6 +6,7 @@ import OttoDecoRightImage from './image-countdown_deco_right.png'
 
 import Image from 'next/image'
 import Countdown from 'src/common/Countdown'
+import { OTTO_WL_MINT_START_TIME } from 'src/constants'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -73,7 +74,7 @@ const OttoCountdownSection = () => {
         title={t('otto.countdown.mintSubtitle')}
         color="mode.white"
         bgcolor="mode.darkBlue"
-        dueDate={new Date(Date.UTC(2022, 2, 19, 13))}
+        dueDate={OTTO_WL_MINT_START_TIME}
         onTimeUp={() => {}}
       />
       {/* TODO|OTTO: add time up callback */}

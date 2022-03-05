@@ -42,6 +42,7 @@ const English = {
       '28Chest': '28-Day Chest',
       '14Chest': '14-Day Chest',
       new: 'NEW!',
+      addToCalendar: 'Add to Calendar',
     },
     time: {
       days: 'Days',
@@ -214,7 +215,7 @@ const English = {
         mintTitle: 'Mint your Ottos!',
         mintSubtitle: 'Mint Countdown',
         hintDescription:
-          'Ottos can be minted using ETH/CLAM, so make sure you have the required amount prior to minting.',
+          "We're offering a 30% discount when you pay with $CLAM, so make sure you have the required amount prior to minting.",
         buyNow: 'BUY NOW',
       },
     },

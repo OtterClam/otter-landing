@@ -1,15 +1,16 @@
 import { makeStyles } from '@material-ui/core'
-import OttoBanner from 'src/components/Otto/OttoBanner'
-import OttoWhitelistSection from 'src/components/Otto/OttoWhitelistSection'
-import OttoGetSection from 'src/components/Otto/OttoGetSection'
-import OttoTypeSection from 'src/components/Otto/OttoTypeSection'
-import OttoComponentSection from 'src/components/Otto/OttoComponentSection'
-import OttoFactorySection from 'src/components/Otto/OttoFactorySection'
-import OtterRiverSection from 'src/components/Otto/OttoRiverSection'
-import OttoUsageSection from 'src/components/Otto/OtterUsageSection'
-import OttoRoadMapSection from 'src/components/Otto/OtterRoadmapSection'
-import OttoCountdownSection from 'src/components/Otto/OttoCountdownSection'
 import Head from 'next/head'
+import OttoRoadMapSection from 'src/components/Otto/OtterRoadmapSection'
+import OttoUsageSection from 'src/components/Otto/OtterUsageSection'
+import OttoBanner from 'src/components/Otto/OttoBanner'
+import OttoComponentSection from 'src/components/Otto/OttoComponentSection'
+import OttoCountdownSection from 'src/components/Otto/OttoCountdownSection'
+import OttoFactorySection from 'src/components/Otto/OttoFactorySection'
+import OttoGetSection from 'src/components/Otto/OttoGetSection'
+import OtterRiverSection from 'src/components/Otto/OttoRiverSection'
+import OttoSmallCountdownSection from 'src/components/Otto/OttoSmallCountdownSection'
+import OttoTypeSection from 'src/components/Otto/OttoTypeSection'
+import OttoWhitelistSection from 'src/components/Otto/OttoWhitelistSection'
 
 const useStyles = makeStyles((theme) => ({
   view: {
@@ -33,6 +34,7 @@ const OttoPage = () => {
         <meta property="og:image" content={process.env.NEXT_PUBLIC_URL + '/otto-og.jpg'} />
       </Head>
       <OttoBanner />
+      <OttoSmallCountdownSection />
       <OttoWhitelistSection />
       <OttoGetSection />
       <OttoTypeSection />
