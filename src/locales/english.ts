@@ -158,10 +158,10 @@ const English = {
         title: 'Types of Otto',
         ottoName: 'Otto',
         ottoDescription:
-          "There are only 2,950 of these otterly handsome fellows. They don't just jazz up your online profiles, they are part of the genesis release, capable of breeding otter pups to increase the kingdom's otter population.",
+          "There are only 1,950 of these otterly handsome fellows. They don't just jazz up your online profiles, they are part of the genesis release, capable of breeding otter pups to increase the kingdom's otter population.",
         lottieName: 'Lottie',
         lottieDescription:
-          '1,950 female Ottos make these NFTs a bit more enticing than the males, but no less adorable. Also part of the genesis collection, these fashionable Lotties will melt your heart with one lovable look. They also aspire to be fertile mothers of many pups. You can breed them with male Ottos or non-gender ones as well!',
+          '2,950 female Ottos make these NFTs a bit more enticing than the males, but no less adorable. Also part of the genesis collection, these fashionable Lotties will melt your heart with one lovable look. They also aspire to be fertile mothers of many pups. You can breed them with male Ottos or non-gender ones as well!',
         cleoName: 'Cleo',
         cleoDescription:
           "The rarest otters in the kingdom, you won't see these laying around any old pond or stream. Non-gender Ottos can be used to breed with either male or female Ottos in the genesis collection. Consider yourself lucky if you've acquired one of these extraordinary creatures!",

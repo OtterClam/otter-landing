@@ -62,13 +62,13 @@ const OttoTypeSection = () => {
         name: t('otto.type.ottoName'),
         type: 'otto_otto',
         description: t('otto.type.ottoDescription'),
-        total: '2,950',
+        total: '1,950',
       },
       {
         name: t('otto.type.lottieName'),
         type: 'otto_lottie',
         description: t('otto.type.lottieDescription'),
-        total: '1,950',
+        total: '2,950',
       },
       {
         name: t('otto.type.cleoName'),
