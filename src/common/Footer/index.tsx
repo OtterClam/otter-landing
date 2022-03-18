@@ -1,11 +1,14 @@
 import { Link, makeStyles } from '@material-ui/core'
-import { RESOURCES_LINKS, INVOLVED_LINKS } from './constant'
-import PartnershipLightModeImage from 'public/logo-partnership-light.png'
-import SlowmistLightModeImage from 'public/logo-slowmist-light.png'
-import FooterDeco from './images/deco-footer.webp'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useTranslation } from "react-i18next"
+import PartnershipLightModeImage from 'public/logo-partnership-light.png'
+import PolygonLogo from './images/logo_polygon.svg'
+import QiDAOLogo from './images/logo_qidao.png'
+import NFTCalendarLogo from './images/logo_nft_calendar.svg'
+import SlowmistLightModeImage from 'public/logo-slowmist-light.png'
+import { useTranslation } from 'react-i18next'
+import { INVOLVED_LINKS, RESOURCES_LINKS } from './constant'
+import FooterDeco from './images/deco-footer.webp'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -80,7 +83,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   partnershipLogo: {
+    display: 'flex',
+    alignItems: 'center',
     maxWidth: '310px',
+    gap: '10px',
   },
   links: {
     display: 'grid',
@@ -113,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles()
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const { pathname } = useRouter()
   const showDeco = pathname !== '/otto'
   return (
@@ -128,13 +134,15 @@ const Footer = () => {
           <h5 className={classes.h5}>{t('footer.partnership')}</h5>
           <div className={`${classes.column} ${classes.partnership}`}>
             <div className={classes.partnershipLogo}>
-              <Image
-                src={PartnershipLightModeImage}
-                width={310}
-                height={62}
-                alt="partnership"
-                layout="fixed"
-              />
+              <a href="https://polygon.technology/" target="_blank" rel="noreferrer">
+                <PolygonLogo width="105" height="62" />
+              </a>
+              <a href="https://app.mai.finance/" target="_blank" rel="noreferrer">
+                <Image src={QiDAOLogo} width={90} height={41} alt="QiDAO" layout="intrinsic" />
+              </a>
+              <a href="https://nftcalendar.io/" target="_blank" rel="noreferrer">
+                <NFTCalendarLogo width="47" height="62" />
+              </a>
             </div>
 
             <div className={classes.partnershipText}>
@@ -142,7 +150,14 @@ const Footer = () => {
               <p className={`${classes.body2} ${classes.auditText}`}>
                 {t('footer.audit')}
                 <div className={classes.slowmist}>
-                  <Image src={SlowmistLightModeImage} width={80} height={18} alt="slowmist" layout="fixed" loading="eager" />
+                  <Image
+                    src={SlowmistLightModeImage}
+                    width={80}
+                    height={18}
+                    alt="slowmist"
+                    layout="fixed"
+                    loading="eager"
+                  />
                 </div>
               </p>
             </div>
