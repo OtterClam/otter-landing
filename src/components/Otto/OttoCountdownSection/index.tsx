@@ -7,6 +7,7 @@ import OttoDecoRightImage from './image-countdown_deco_right.png'
 import Image from 'next/image'
 import Countdown from 'src/common/Countdown'
 import { OTTO_WL_MINT_START_TIME } from 'src/constants'
+import RoundedButton from 'src/components/common/RoundedButton'
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -77,7 +78,7 @@ const OttoCountdownSection = () => {
         dueDate={OTTO_WL_MINT_START_TIME}
         onTimeUp={() => {}}
       />
-      {/* TODO|OTTO: add time up callback */}
+      <RoundedButton href="https://ottopia.app " type="solid" text={t('otto.banner.ottopia')} />
       <OttoBuyClamHint />
       <div className={classes.decoRight}>
         <Image src={OttoDecoRightImage} alt="countdown right" placeholder="blur" />

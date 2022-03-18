@@ -57,7 +57,8 @@ const English = {
     },
     header: {
       treasury: 'Treasury',
-      otto: 'Otto',
+      otto: 'About Otto',
+      ottopia: 'Ottopia',
       airdrop: 'Airdrop',
       getStarted: 'Get Started',
     },
@@ -131,6 +132,7 @@ const English = {
         slogan: 'The First Citizens of the Otter Kingdom',
         description:
           'Breedable. Stakeable. Loveable! Ottos from the Genesis Collection are not only the cutest otters in the kingdom, they also have exclusive privileges. Wanna know more? Check out the roadmap below.',
+        ottopia: 'Enter Ottopia app',
       },
       whitelist: {
         amount: 'Genesis Release',
@@ -147,12 +149,11 @@ const English = {
         buyClamHighlight: 'CLAM',
         buyClam2: 'Otto Incubators can be minted using CLAM or ETH, but you will receive a 30% discount with CLAM.',
         buyClamButton: 'Buy CLAM',
-        calendar1: 'Ottos need time and nourishment to grow in the incubators. ',
-        calendarHighlight: 'Jan 29',
-        calendar2: 'When the time is up, hatch your unique Otto!',
-        calendarButton: 'Coming Soon',
-        incubator1: 'Mint Otto Incubators with Whitelist Ticket and CLAM/ETH\n',
-        incubator3: 'Mint date cooming soon',
+        step4: 'The portals need time to initiate the transmission. When the time is up, summon your unique Otto!',
+        step4Button: 'Join Discord to stay updated',
+        incubator1: 'Mint Otto Portal with Whitelist Ticket and CLAM/ETH starting on the Sale day.',
+        // incubator3: 'Mint date March 19',
+        mintButton: 'Mint',
       },
       type: {
         title: 'Types of Otto',

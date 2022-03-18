@@ -60,23 +60,15 @@ const OttoGetSection = () => {
         },
       },
       {
-        description: [
-          { type: 'normal', text: t('otto.get.incubator1') },
-          // { type: 'highlight', text: t('otto.get.incubator2') },
-          { type: 'normal', text: t('otto.get.incubator3') },
-        ],
+        description: [{ type: 'normal', text: t('otto.get.incubator1') }],
         button: {
-          text: t('otto.get.buyClamButton'),
-          href: 'https://quickswap.exchange/#/swap?outputCurrency=0xC250e9987A032ACAC293d838726C511E6E1C029d',
+          text: t('otto.get.mintButton'),
+          href: 'https://ottopia.app',
         },
       },
       {
-        description: [
-          { type: 'normal', text: t('otto.get.calendar1') },
-          { type: 'normal', text: t('otto.get.calendar2') },
-        ],
-        // FIXME|OTTO: replace with google calendar api
-        button: { text: t('otto.get.calendarButton'), href: 'https://calendar.google.com/calendar/u/0/r?tab=rc' },
+        description: [{ type: 'normal', text: t('otto.get.step4') }],
+        button: { text: t('otto.get.step4Button'), href: 'https://discord.gg/otterclam' },
       },
     ],
     [t]

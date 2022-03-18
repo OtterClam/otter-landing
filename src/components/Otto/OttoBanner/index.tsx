@@ -74,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttons: {
+    marginTop: '40px',
     display: 'flex',
     flexWrap: 'wrap',
     gap: '20px',
@@ -100,6 +101,7 @@ const OttoBanner = () => {
         </h2>
         <h3 className={classes.slogan}>{t('otto.banner.slogan')}</h3>
         <h4 className={classes.description}>{t('otto.banner.description')}</h4>
+        <RoundedButton href="https://ottopia.app " type="solid" text={t('otto.banner.ottopia')} />
         <div className={classes.buttons}>
           <RoundedButton
             href="https://t.me/otterclam_official"
