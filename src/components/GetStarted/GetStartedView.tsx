@@ -66,7 +66,7 @@ const GetStartedView = () => {
         </ImageContainer>
         <p>
           Need more details than that? We got you. Check out
-          <a href="https://hackmd.io/G4NdFuxLQiO8Oannby5WzQ" target="_blank" rel="noreferrer">
+          <a href="https://docs.otterclam.finance/tutorial/how-to-buy-and-stake-clam" target="_blank" rel="noreferrer">
             {' '}
             this tutorial{' '}
           </a>
