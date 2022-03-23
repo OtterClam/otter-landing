@@ -34,7 +34,6 @@ const OttoPage = () => {
         <meta property="og:image" content={process.env.NEXT_PUBLIC_URL + '/otto-og.jpg'} />
       </Head>
       <OttoBanner />
-      <OttoSmallCountdownSection />
       <OttoWhitelistSection />
       <OttoGetSection />
       <OttoTypeSection />

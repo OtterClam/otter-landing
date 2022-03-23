@@ -71,13 +71,6 @@ const OttoCountdownSection = () => {
         <Image src={OttoDecoLeftImage} alt="countdown left" loading="eager" />
       </div>
       <h4 className={classes.title}>{t('otto.countdown.mintTitle')}</h4>
-      <Countdown
-        title={t('otto.countdown.mintSubtitle')}
-        color="mode.white"
-        bgcolor="mode.darkBlue"
-        dueDate={OTTO_WL_MINT_START_TIME}
-        onTimeUp={() => {}}
-      />
       <RoundedButton href="https://ottopia.app " type="solid" text={t('otto.banner.ottopia')} />
       <OttoBuyClamHint />
       <div className={classes.decoRight}>
