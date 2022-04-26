@@ -5,6 +5,8 @@ import PartnershipLightModeImage from 'public/logo-partnership-light.png'
 import PolygonLogo from './images/logo_polygon.svg'
 import QiDAOLogo from './images/logo_qidao.png'
 import NFTCalendarLogo from './images/logo_nft_calendar.svg'
+import RaritySniperLogo from './images/logo_rarity_sniper.png'
+import DeFiPlusLogo from './images/logo_defi_plus.png'
 import SlowmistLightModeImage from 'public/logo-slowmist-light.png'
 import { useTranslation } from 'react-i18next'
 import { INVOLVED_LINKS, RESOURCES_LINKS } from './constant'
@@ -142,6 +144,12 @@ const Footer = () => {
               </a>
               <a href="https://nftcalendar.io/" target="_blank" rel="noreferrer">
                 <NFTCalendarLogo width="47" height="62" />
+              </a>
+              <a href="https://raritysniper.com/nft-drops-calendar/" target="_blank" rel="noreferrer">
+                <Image src={RaritySniperLogo} width={86} height={36} alt="Rarity Sniper" layout="intrinsic" />
+              </a>
+              <a href="https://www.defipulse.com/" target="_blank" rel="noreferrer">
+                <Image src={DeFiPlusLogo} width={40} height={40} alt="DeFi Pulse" layout="intrinsic" />
               </a>
             </div>
 
